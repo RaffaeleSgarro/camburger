@@ -19,7 +19,11 @@ Camburger.Sidebar = function(options) {
     this.panels.el.appendTo(this.el);
     
     this.subscribe('item:click', function(ctx, item){
-        self.close();
+        self.hide();
+    });
+    
+    this.dim.click(function(e){
+        self.hide();
     });
 };
 
@@ -27,16 +31,20 @@ Camburger.Sidebar.prototype.setMenu = function(menu) {
     this.panels.setMenu(menu);
 };
 
-Camburger.Sidebar.prototype.open = function() {
+Camburger.Sidebar.prototype.show = function() {
     if (!this.open) {
-        // TODO
+        this.dim.fadeIn();
+        this.el.animate({left: 0});
         this.open = true;
+        this.setMenu(this.history.beginning());
     }
 };
 
-Camburger.Sidebar.prototype.close = function() {
+Camburger.Sidebar.prototype.hide = function() {
+    var width = this.el.width();
     if (this.open) {
-        // TODO
+        this.dim.fadeOut();
+        this.el.animate({left: -width + 'px'});
         this.open = false;
     }
 };
@@ -44,9 +52,9 @@ Camburger.Sidebar.prototype.close = function() {
 Camburger.Sidebar.prototype.toggle = function() {
     // TODO debounce
     if (this.open) {
-        close();
+        this.hide();
     } else {
-        open();
+        this.show();
     }
 };
 
@@ -79,7 +87,7 @@ Camburger.Header = function(options) {
 
 Camburger.Header.prototype.onClick = function(e) {
     if (this.sidebar.history.isEmpty()) {
-        this.sidebar.close();
+        this.sidebar.hide();
     } else {
         this.sidebar.history.back();
     }
@@ -114,6 +122,10 @@ Camburger.History.prototype.current = function() {
         throw "History is empty. Current element is undefined";
     }
     return this.history[this.history.length - 1];
+};
+
+Camburger.History.prototype.beginning = function() {
+    return this.history[0];
 };
 
 Camburger.History.prototype.openDirectory = function(item) {
@@ -167,6 +179,7 @@ Camburger.Panels = function(options) {
 Camburger.Panels.prototype.setMenu = function(menu) {
     var self = this;
     this.el.empty();
+    this.el.scrollTop(0);
     this.rootPanel = new Camburger.Panel({
         sidebar: self.sidebar
       , items: menu

@@ -26,6 +26,10 @@ $(function() {
     window.sidebar = new Camburger.Sidebar({});
     sidebar.setMenu(menu);
     
+    $('.toggle-sidebar').click(function(e){
+        window.sidebar.show();
+    });
+    
     sidebar.subscribe('item:click', function(ctx, item){
         console.log('Clicked ' + item.title);
     });

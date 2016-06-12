@@ -22,6 +22,10 @@ body {
   font-size: 30px;
 }
 
+.top-navigation .toggle-sidebar {
+  cursor: pointer;
+}
+
 .fa-spacing {
   margin-right: 10px;
 }
