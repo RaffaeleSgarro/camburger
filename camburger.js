@@ -25,6 +25,10 @@ Camburger.Sidebar = function(options) {
     this.dim.click(function(e){
         self.hide();
     });
+
+    if (this.open) {
+        this.publish('show');
+    }
 };
 
 Camburger.Sidebar.prototype.setMenu = function(menu) {
@@ -37,6 +41,7 @@ Camburger.Sidebar.prototype.show = function() {
         this.el.animate({left: 0});
         this.open = true;
         this.setMenu(this.history.beginning());
+        this.publish('show');
     }
 };
 
@@ -147,11 +152,17 @@ Camburger.History.prototype.isEmpty = function() {
 };
 
 Camburger.SearchBar = function(options) {
+    var self = this;
     this.sidebar = options.sidebar;
     this.el = $(
       '<div class="search-bar">'
     + '  <input type="text" class="search-field" name="search-field" placeholder="Cerca" />'
     + '</div>');
+    this.sidebar.subscribe('show', function(){
+        var searchField = self.el.find('.search-field');
+        searchField.focus();
+        searchField.val('');
+    });
 };
 
 Camburger.Panels = function(options) {
