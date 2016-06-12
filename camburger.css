@@ -16,6 +16,9 @@
   color: white;
   background-color: #3683D6;
   cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .camburger-sidebar .search-bar {
