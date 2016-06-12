@@ -11,10 +11,19 @@
 
 .camburger-sidebar .header {
   height: 60px;
-  padding: 20px;
+  padding: 10px 20px;
   line-height: 60px;
   color: white;
   background-color: #3683D6;
+}
+
+.camburger-sidebar .panel {
+  position: absolute;
+  top: 80px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: scroll;
 }
 
 .camburger-sidebar .item {
