@@ -3,6 +3,9 @@ Camburger = {};
 Camburger.Sidebar = function(options) {
     var self = this;
     
+    this.open = true;
+    
+    this.history = new Camburger.History({sidebar: self});
     this.dim = $('<div class="camburger-dim"></div>');
     this.el = $('<div class="camburger-sidebar"></div>');
     this.header = new Camburger.Header({sidebar: self});
@@ -14,20 +17,121 @@ Camburger.Sidebar = function(options) {
     this.header.el.appendTo(this.el);
     this.searchBar.el.appendTo(this.el);
     this.panels.el.appendTo(this.el);
+    
+    this.subscribe('item:click', function(ctx, item){
+        self.close();
+    });
 };
 
 Camburger.Sidebar.prototype.setMenu = function(menu) {
     this.panels.setMenu(menu);
 };
 
+Camburger.Sidebar.prototype.open = function() {
+    if (!this.open) {
+        // TODO
+        this.open = true;
+    }
+};
+
+Camburger.Sidebar.prototype.close = function() {
+    if (this.open) {
+        // TODO
+        this.open = false;
+    }
+};
+
+Camburger.Sidebar.prototype.toggle = function() {
+    // TODO debounce
+    if (this.open) {
+        close();
+    } else {
+        open();
+    }
+};
+
+Camburger.Sidebar.prototype.publish = function(topic, data) {
+    EventBus.dispatch(topic, this, data);
+};
+
+Camburger.Sidebar.prototype.subscribe = function(topic, callback) {
+    EventBus.addEventListener(topic, callback);
+};
+
 Camburger.Header = function(options) {
+    var self = this;
     this.sidebar = options.sidebar;
     this.el = $(
       '<div class="header">'
     + '  <span class="toggle-sidebar">'
-    + '    <i class="fa fa-bars fa-spacing"></i>Camilla'
+    + '    <i class="fa fa-bars fa-spacing icon"></i><span class="text"><span>'
     + '  </span>'
     + '</div>');
+    this.sidebar.subscribe('history:openDirectory', function(directory){
+        self.render();
+    });
+    this.sidebar.subscribe('history:back', function(directory){
+        self.render();
+    });
+    this.el.click(function(e){ self.onClick(e); });
+    this.render();
+};
+
+Camburger.Header.prototype.onClick = function(e) {
+    if (this.sidebar.history.isEmpty()) {
+        this.sidebar.close();
+    } else {
+        this.sidebar.history.back();
+    }
+};
+
+Camburger.Header.prototype.render = function() {
+    var $text = this.el.find('.text');
+    var $icon = this.el.find('.icon');
+    if (this.sidebar.history.isEmpty()) {
+        $text.text('Camilla');
+        $icon.addClass('fa-bars');
+        $icon.removeClass('fa-arrow-left');
+    } else {
+        $text.text(this.sidebar.history.current().title());
+        $icon.addClass('fa-arrow-left');
+        $icon.removeClass('fa-bars');
+    }
+};
+
+Camburger.History = function(options) {
+    this.sidebar = options.sidebar;
+    this.history = [];
+};
+
+Camburger.History.prototype.start = function(items) {
+    this.history = [];
+    this.openDirectory(items);
+};
+
+Camburger.History.prototype.current = function() {
+    if (this.length < 1) {
+        throw "History is empty. Current element is undefined";
+    }
+    return this.history[this.history.length - 1];
+};
+
+Camburger.History.prototype.openDirectory = function(item) {
+    this.history.push(item);
+    this.sidebar.publish('history:openDirectory', this);
+};
+
+Camburger.History.prototype.back = function(item) {
+    if (this.isEmpty()) {
+        throw { message: "Cannot go back!", history: this.history };
+    }
+    var removed = this.history.pop();
+    this.sidebar.publish('history:back', this);
+    return removed;
+};
+
+Camburger.History.prototype.isEmpty = function() {
+    return this.history.length <= 1;
 };
 
 Camburger.SearchBar = function(options) {
@@ -39,19 +143,78 @@ Camburger.SearchBar = function(options) {
 };
 
 Camburger.Panels = function(options) {
+    var self = this;
     this.sidebar = options.sidebar;
     this.el = $('<div class="panels"></div>');
+    this.sidebar.subscribe('directory:click', function(ctx, directory){
+        var panel = new Camburger.Panel({
+            sidebar: self.sidebar
+          , items: directory.children
+        });
+        
+        self.swapToLeft(panel);
+    });
+    this.sidebar.subscribe('history:back', function(ctx, history){
+        var panel = new Camburger.Panel({
+            sidebar: self.sidebar
+          , items: history.isEmpty() ? history.current() : history.current().children
+        });
+        
+        self.swapToRight(panel);
+    });
 };
 
 Camburger.Panels.prototype.setMenu = function(menu) {
     var self = this;
-    
     this.el.empty();
     this.rootPanel = new Camburger.Panel({
         sidebar: self.sidebar
       , items: menu
     });
     this.rootPanel.el.appendTo(this.el);
+    this.currentPanel = this.rootPanel;
+    this.sidebar.history.start(menu);
+};
+
+Camburger.Panels.prototype.swapToLeft = function(panel) {
+    var width = this.sidebar.el.width();
+    this.swap(panel
+      , {left:  width + 'px', right: -width + 'px'}
+      , {left: -width + 'px', right: width + 'px'}
+    );
+};
+
+Camburger.Panels.prototype.swapToRight = function(panel) {
+    var width = this.sidebar.el.width();
+    this.swap(panel
+      , {left:  -width + 'px', right: width + 'px'}
+      , {left:   width + 'px', right: -width + 'px'}
+    );
+};
+
+Camburger.Panels.prototype.swap = function(panel, inInitial, outAnimation) {
+    var self = this;
+    
+    panel.el.css(inInitial);
+    
+    panel.el.appendTo(this.el);
+    
+    panel.el.animate({
+        left: 0,
+        right: 0,
+    }, {
+        complete: function() {
+            self.el.scrollTop(0);
+        }
+    });
+    
+    this.currentPanel.el.animate(outAnimation, {
+        complete: function() {
+            this.remove();
+        }
+    });
+    
+    this.currentPanel = panel;
 };
 
 Camburger.Panel = function(options) {
@@ -115,14 +278,20 @@ Camburger.MenuItem.prototype.render = function() {
 
 Camburger.MenuItem.prototype.onClick = function(e) {
     if (this.isLeaf()) {
-        console.log(this.data.title);
+        this.sidebar.publish('item:click', this.data);
     } else {
-        // TODO
+        this.sidebar.history.openDirectory(this);
+        this.sidebar.publish('directory:click', this.data);
     }
 };
 
 Camburger.MenuItem.prototype.onToggleFavourite = function(e) {
     this.data.favourite = !this.data.favourite;
     this.render();
+    this.sidebar.publish('favourite:toggle', this.data);
     e.stopPropagation();
+};
+
+Camburger.MenuItem.prototype.title = function() {
+    return this.data.title;
 };
