@@ -39,12 +39,24 @@
 }
 
 .camburger-sidebar .item {
-  padding: 10px;
+  position: relative;
+  padding: 10px 30px 10px 10px;
   border-bottom: 1px solid #CCCCCC;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+  cursor: pointer;
 }
 
 .camburger-sidebar .item .fa-stack .fa-circle {
   color: #3683D6;
+}
+
+.camburger-sidebar .item .toggle-favourite {
+  position: absolute;
+  top: 18px;
+  right: 5px;
+  cursor: pointer;
 }
 
 .camburger-dim {
