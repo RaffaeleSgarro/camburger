@@ -167,6 +167,7 @@ Camburger.SearchBar = function(options) {
 
 Camburger.Panels = function(options) {
     var self = this;
+    this.currentPanel = null;
     this.sidebar = options.sidebar;
     this.el = $('<div class="panels"></div>');
     this.sidebar.subscribe('directory:click', function(ctx, directory){
@@ -185,6 +186,30 @@ Camburger.Panels = function(options) {
         
         self.swapToRight(panel);
     });
+    
+    $(document).keydown(function(e){ self.onKeyboardEvent(e); });
+};
+
+Camburger.Panels.prototype.onKeyboardEvent = function(e) {
+    if (!this.sidebar.open || !this.currentPanel)
+        return;
+    
+    switch (e.key) {
+        case 'ArrowUp':
+            this.currentPanel.moveKeyboardSelection(-1);
+            break;
+        case 'ArrowDown':
+            this.currentPanel.moveKeyboardSelection(+1);
+            break;
+        case 'Enter':
+            this.currentPanel.keyboardSelection().onClick();
+            break;
+    }
+};
+
+Camburger.Panels.prototype.setCurrentPanel = function(panel) {
+    this.currentPanel = panel;
+    this.currentPanel.resetKeyboardSelection();
 };
 
 Camburger.Panels.prototype.setMenu = function(menu) {
@@ -196,7 +221,7 @@ Camburger.Panels.prototype.setMenu = function(menu) {
       , items: menu
     });
     this.rootPanel.el.appendTo(this.el);
-    this.currentPanel = this.rootPanel;
+    this.setCurrentPanel(this.rootPanel);
     this.sidebar.history.start(menu);
 };
 
@@ -235,10 +260,9 @@ Camburger.Panels.prototype.swap = function(panel, inInitial, outAnimation) {
     this.currentPanel.el.animate(outAnimation, {
         complete: function() {
             this.remove();
+            self.setCurrentPanel(panel);
         }
     });
-    
-    this.currentPanel = panel;
 };
 
 Camburger.Panel = function(options) {
@@ -247,6 +271,8 @@ Camburger.Panel = function(options) {
     this.sidebar = options.sidebar;
     
     this.el = $('<div class="panel"></div>');
+    this.items = [];
+    this.selectionIndex = -1;
     
     $.each(options.items, function(index, itemOptions){
         var menuItem = new Camburger.MenuItem({
@@ -254,7 +280,32 @@ Camburger.Panel = function(options) {
           , sidebar: self.sidebar
         });
         menuItem.el.appendTo(self.el);
+        self.items.push(menuItem);
     });
+};
+
+Camburger.Panel.prototype.setKeyboardSelectionIndex = function(index) {
+    if (index >= 0 && index < this.items.length) {
+        if (this.keyboardSelection()) {
+            this.keyboardSelection().keyboardSelect(false);
+        }
+        this.selectionIndex = index;
+        this.keyboardSelection().keyboardSelect(true);
+    }
+};
+
+Camburger.Panel.prototype.resetKeyboardSelection = function() {
+    this.setKeyboardSelectionIndex(0);
+};
+
+Camburger.Panel.prototype.moveKeyboardSelection = function(delta) {
+    this.setKeyboardSelectionIndex(this.selectionIndex + delta);
+};
+
+Camburger.Panel.prototype.keyboardSelection = function() { 
+    if (this.selectionIndex >= 0 || this.selectionIndex < this.items.length) {
+        return this.items[this.selectionIndex];
+    }
 };
 
 Camburger.MenuItem = function(options) {
@@ -297,6 +348,15 @@ Camburger.MenuItem.prototype.render = function() {
     } else {
         indicator.addClass('fa-star-o');
         indicator.removeClass('fa-star');
+    }
+};
+
+Camburger.MenuItem.prototype.keyboardSelect = function(selected) {
+    if (selected) {
+        this.el.addClass('kbd-selection');
+        this.el[0].scrollIntoView();
+    } else {
+        this.el.removeClass('kbd-selection');
     }
 };
 

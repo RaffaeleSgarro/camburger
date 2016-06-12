@@ -56,6 +56,10 @@
   cursor: pointer;
 }
 
+.camburger-sidebar .item.kbd-selection {
+  background-color: white;
+}
+
 .camburger-sidebar .item .fa-stack .fa-circle {
   color: #3683D6;
 }
