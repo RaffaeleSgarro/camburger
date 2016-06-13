@@ -2,26 +2,31 @@ Camburger = {};
 
 Camburger.Sidebar = function(options) {
     var self = this;
-    
+
     this.open = true;
-    
+
     this.history = new Camburger.History({sidebar: self});
     this.dim = $('<div class="camburger-dim"></div>');
     this.el = $('<div class="camburger-sidebar"></div>');
     this.header = new Camburger.Header({sidebar: self});
     this.searchBar = new Camburger.SearchBar({sidebar: self});
     this.panels = new Camburger.Panels({sidebar: self});
-    
+    this.searchIndex = new Camburger.SearchIndex({});
+
     this.dim.appendTo($('body'));
     this.el.appendTo($('body'));
     this.header.el.appendTo(this.el);
     this.searchBar.el.appendTo(this.el);
     this.panels.el.appendTo(this.el);
-    
+
     this.subscribe('item:click', function(ctx, item){
         self.hide();
     });
-    
+
+    this.subscribe('search', function(ctx, searchText){
+        self.onSearch(searchText);
+    });
+
     this.dim.click(function(e){
         self.hide();
     });
@@ -31,26 +36,52 @@ Camburger.Sidebar = function(options) {
     }
 };
 
+Camburger.Sidebar.prototype.onSearch = function(searchText) {
+    var self = this;
+
+    if (searchText && searchText.length > 0) {
+        if (searchText != self.lastSearchText) {
+            self.lastSearchText = searchText;
+            self.searchResult = self.searchIndex.search(searchText);
+            self.header.showSearchResult(searchText);
+            self.panels.showSearchResult(self.searchResult);
+        }
+    } else {
+        self.header.clearSearchResult();
+        self.panels.clearSearchResult();
+    }
+};
+
 Camburger.Sidebar.prototype.setMenu = function(menu) {
     this.panels.setMenu(menu);
+    this.searchIndex.rebuild(menu);
 };
 
 Camburger.Sidebar.prototype.show = function() {
-    if (!this.open) {
-        this.dim.fadeIn();
-        this.el.animate({left: 0});
-        this.open = true;
-        this.setMenu(this.history.beginning());
-        this.publish('show');
+    var self = this;
+    if (!self.open) {
+        self.dim.fadeIn();
+        self.lastSearchText = false;
+        self.setMenu(self.history.beginning());
+        self.publish('show');
+        self.el.animate({left: 0}, {
+            complete: function() {
+                self.open = true;
+            }
+        });
+
     }
 };
 
 Camburger.Sidebar.prototype.hide = function() {
+    var self = this;
     var width = this.el.width();
     if (this.open) {
         this.dim.fadeOut();
-        this.el.animate({left: -width + 'px'});
-        this.open = false;
+        this.publish('hide');
+        this.el.animate({left: -width + 'px'}, {
+            complete: function() { self.open = false; }
+        });
     }
 };
 
@@ -59,15 +90,15 @@ Camburger.Sidebar.prototype.toggle = function() {
     if (self.animating) {
         return;
     }
-    
+
     self.animating = true;
-    
+
     if (self.open) {
         self.hide();
     } else {
         self.show();
     }
-    
+
     setTimeout(function(){
         self.animating = false;
     }, 400);
@@ -79,6 +110,49 @@ Camburger.Sidebar.prototype.publish = function(topic, data) {
 
 Camburger.Sidebar.prototype.subscribe = function(topic, callback) {
     EventBus.addEventListener(topic, callback);
+};
+
+Camburger.SearchIndex = function(options) {
+    this.titleIndex = [];
+};
+
+Camburger.SearchIndex.prototype.rebuild = function(items) {
+    var self = this;
+    self.titleIndex = [];
+
+    $.each(items, function(i, childItem){
+        indexMenuItem(childItem);
+    });
+
+    function indexMenuItem(menuItem) {
+        if (menuItem.title && (!menuItem.children || menuItem.children.length == 0)) {
+            self.titleIndex.push({
+                text: menuItem.title.toLowerCase(),
+                menuItem: menuItem
+            });
+        } else {
+            $.each(menuItem.children, function(i, childItem){
+                indexMenuItem(childItem);
+            });
+        }
+    }
+};
+
+Camburger.SearchIndex.prototype.search = function(text) {
+    if (!text || text.length < 2) {
+        return [];
+    }
+
+    var self = this;
+    var result = [];
+    var normalized = text.toLowerCase();
+    $.each(self.titleIndex, function(i, indexed){
+        if (indexed.text.indexOf(normalized) > -1) {
+            result.push(indexed.menuItem);
+        }
+    });
+
+    return result;
 };
 
 Camburger.Header = function(options) {
@@ -96,6 +170,9 @@ Camburger.Header = function(options) {
     this.sidebar.subscribe('history:back', function(directory){
         self.render();
     });
+    this.sidebar.subscribe('hide', function(){
+        self.searchText = false;
+    });
     this.el.click(function(e){ self.onClick(e); });
     this.render();
 };
@@ -108,17 +185,33 @@ Camburger.Header.prototype.onClick = function(e) {
     }
 };
 
+Camburger.Header.prototype.showSearchResult = function(searchText) {
+    this.searchText = searchText;
+    this.render();
+};
+
+Camburger.Header.prototype.clearSearchResult = function(searchText) {
+    this.searchText = false;
+    this.render();
+};
+
 Camburger.Header.prototype.render = function() {
     var $text = this.el.find('.text');
     var $icon = this.el.find('.icon');
-    if (this.sidebar.history.isEmpty()) {
-        $text.text('Camilla');
-        $icon.addClass('fa-bars');
-        $icon.removeClass('fa-arrow-left');
+
+    $icon.removeClass('fa-arrow-left fa-bars fa-search');
+
+    if (this.searchText) {
+        $text.text('Cerca: "' + this.searchText + '"');
+        $icon.addClass('fa-search');
     } else {
-        $text.text(this.sidebar.history.current().title());
-        $icon.addClass('fa-arrow-left');
-        $icon.removeClass('fa-bars');
+        if (this.sidebar.history.isEmpty()) {
+            $text.text('Camilla');
+            $icon.addClass('fa-bars');
+        } else {
+            $text.text(this.sidebar.history.currentPage().title);
+            $icon.addClass('fa-arrow-left');
+        }
     }
 };
 
@@ -132,11 +225,22 @@ Camburger.History.prototype.start = function(items) {
     this.openDirectory(items);
 };
 
-Camburger.History.prototype.current = function() {
+Camburger.History.prototype.currentPage = function() {
     if (this.length < 1) {
         throw "History is empty. Current element is undefined";
     }
-    return this.history[this.history.length - 1];
+
+    var page = {};
+    var historyItem = this.history[this.history.length - 1];
+
+    if (this.isEmpty()) {
+        page.menu = historyItem;
+    } else {
+        page.title = historyItem.title();
+        page.menu = historyItem.children();
+    }
+
+    return page;
 };
 
 Camburger.History.prototype.beginning = function() {
@@ -168,11 +272,30 @@ Camburger.SearchBar = function(options) {
       '<div class="search-bar">'
     + '  <input type="text" class="search-field" name="search-field" placeholder="Cerca" />'
     + '</div>');
+    this.searchField = this.el.find('.search-field');
     this.sidebar.subscribe('show', function(){
         var searchField = self.el.find('.search-field');
         searchField.focus();
         searchField.val('');
     });
+    this.searchField.keyup(function(e){
+        self.onKeyup(e);
+    });
+};
+
+Camburger.SearchBar.prototype.onKeyup = function(e) {
+    var self = this;
+    if (!self.sidebar.open) {
+        return;
+    }
+
+    self.lastSearchText = self.searchField.val();
+
+    setTimeout(function(){
+        if (self.searchField.val() === self.lastSearchText) {
+            self.sidebar.publish('search', self.lastSearchText);
+        }
+    }, 200);
 };
 
 Camburger.Panels = function(options) {
@@ -185,25 +308,53 @@ Camburger.Panels = function(options) {
             sidebar: self.sidebar
           , items: directory.children
         });
-        
+
         self.swapToLeft(panel);
     });
     this.sidebar.subscribe('history:back', function(ctx, history){
         var panel = new Camburger.Panel({
             sidebar: self.sidebar
-          , items: history.isEmpty() ? history.current() : history.current().children
+          , items: history.currentPage().menu
         });
-        
+
         self.swapToRight(panel);
     });
-    
+
     $(document).keydown(function(e){ self.onKeyboardEvent(e); });
+};
+
+Camburger.Panels.prototype.showSearchResult = function(children) {
+    var self = this;
+
+    if (self.searchPanel) {
+        self.searchPanel.setItems(children);
+        self.searchPanel.resetKeyboardSelection();
+    } else {
+      self.searchPanel = new Camburger.Panel({
+          sidebar: self.sidebar
+        , items: children
+      });
+
+      self.swapToLeft(self.searchPanel);
+    }
+};
+
+Camburger.Panels.prototype.clearSearchResult = function() {
+    var self = this;
+    if (self.searchPanel) {
+        var panel = new Camburger.Panel({
+            sidebar: self.sidebar
+          , items: self.sidebar.history.currentPage().menu
+        });
+        self.searchPanel = false;
+        self.swapToRight(panel);
+    }
 };
 
 Camburger.Panels.prototype.onKeyboardEvent = function(e) {
     if (!this.sidebar.open || !this.currentPanel)
         return;
-    
+
     switch (e.key) {
         case 'ArrowUp':
             this.currentPanel.moveKeyboardSelection(-1);
@@ -233,6 +384,7 @@ Camburger.Panels.prototype.setMenu = function(menu) {
     this.rootPanel.el.appendTo(this.el);
     this.setCurrentPanel(this.rootPanel);
     this.sidebar.history.start(menu);
+    this.searchPanel = false;
 };
 
 Camburger.Panels.prototype.swapToLeft = function(panel) {
@@ -253,11 +405,11 @@ Camburger.Panels.prototype.swapToRight = function(panel) {
 
 Camburger.Panels.prototype.swap = function(panel, inInitial, outAnimation) {
     var self = this;
-    
+
     panel.el.css(inInitial);
-    
+
     panel.el.appendTo(this.el);
-    
+
     panel.el.animate({
         left: 0,
         right: 0,
@@ -266,7 +418,7 @@ Camburger.Panels.prototype.swap = function(panel, inInitial, outAnimation) {
             self.el.scrollTop(0);
         }
     });
-    
+
     this.currentPanel.el.animate(outAnimation, {
         complete: function() {
             this.remove();
@@ -277,14 +429,21 @@ Camburger.Panels.prototype.swap = function(panel, inInitial, outAnimation) {
 
 Camburger.Panel = function(options) {
     var self = this;
-    
+
     this.sidebar = options.sidebar;
-    
+
     this.el = $('<div class="panel"></div>');
     this.items = [];
     this.selectionIndex = -1;
-    
-    $.each(options.items, function(index, itemOptions){
+
+    this.setItems(options.items);
+};
+
+Camburger.Panel.prototype.setItems = function(items) {
+    var self = this;
+    self.items = [];
+    self.el.empty();
+    $.each(items, function(index, itemOptions){
         var menuItem = new Camburger.MenuItem({
             data: itemOptions
           , sidebar: self.sidebar
@@ -312,7 +471,7 @@ Camburger.Panel.prototype.moveKeyboardSelection = function(delta) {
     this.setKeyboardSelectionIndex(this.selectionIndex + delta);
 };
 
-Camburger.Panel.prototype.keyboardSelection = function() { 
+Camburger.Panel.prototype.keyboardSelection = function() {
     if (this.selectionIndex >= 0 || this.selectionIndex < this.items.length) {
         return this.items[this.selectionIndex];
     }
@@ -320,25 +479,25 @@ Camburger.Panel.prototype.keyboardSelection = function() {
 
 Camburger.MenuItem = function(options) {
     var self = this;
-    
+
     this.sidebar = options.sidebar;
-    
+
     this.el = $(
       '<div class="item">'
-    + '  <span class="fa-stack">'    
-    + '    <i class="fa fa-circle fa-stack-2x"></i>'   
-    + '    <i class="fa fa-stack-1x fa-inverse icon"></i>'   
-    + '  </span>'  
-    + '  <span class="text"></span>'  
+    + '  <span class="fa-stack">'
+    + '    <i class="fa fa-circle fa-stack-2x"></i>'
+    + '    <i class="fa fa-stack-1x fa-inverse icon"></i>'
+    + '  </span>'
+    + '  <span class="text"></span>'
     + '  <div class="toggle-favourite"><i class="fa fa-star-o"></i></div>'
     + '</div>');
-    
+
     this.data = options.data;
-    
+
     this.el.click(function(e){ self.onClick(e); });
-    
+
     this.el.find(".toggle-favourite").click(function(e){ self.onToggleFavourite(e); });
-    
+
     this.render();
 };
 
@@ -348,10 +507,10 @@ Camburger.MenuItem.prototype.isLeaf = function() {
 
 Camburger.MenuItem.prototype.render = function() {
     var indicator = this.el.find(".toggle-favourite i");
-    
+
     $(".icon", this.el).addClass("fa-" + this.data.icon);
     $(".text", this.el).text(this.data.title);
-    
+
     if (this.data.favourite) {
         indicator.addClass('fa-star');
         indicator.removeClass('fa-star-o');
@@ -388,4 +547,8 @@ Camburger.MenuItem.prototype.onToggleFavourite = function(e) {
 
 Camburger.MenuItem.prototype.title = function() {
     return this.data.title;
+};
+
+Camburger.MenuItem.prototype.children = function() {
+    return this.data.children;
 };

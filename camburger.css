@@ -28,13 +28,14 @@
 .camburger-sidebar .search-bar .search-field {
   font-size: 1em;
   line-height: 1em;
+  height: 2em;
   padding: 3px;
   width: 280px;
 }
 
 .camburger-sidebar .panels {
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: normal;
   position: absolute;
   top: 130px;
   bottom: 0;
