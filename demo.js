@@ -18,4 +18,7 @@ $(function() {
             window.sidebar.toggle();
         }
     });
+
+    var unicorns = new Unicorns();
+    unicorns.start();
 });

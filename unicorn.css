@@ -1,0 +1,7 @@
+.unicorn {
+    background-image: url('assets/images/unicorn.jpg');
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+}
