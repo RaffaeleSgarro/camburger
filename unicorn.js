@@ -1,9 +1,13 @@
 var Unicorns = function(options) {};
 
 Unicorns.prototype.start = function() {
-    var unicorn = new Unicorn({});
-    unicorn.el.appendTo($("body"));
-    unicorn.moveRandom();
+    var unicorn;
+    var i;
+    for (i = 0; i < 12; i++) {
+        unicorn = new Unicorn({});
+        unicorn.el.appendTo($("body"));
+        unicorn.moveRandom();
+    }
 };
 
 var Unicorn = function(options) {
@@ -20,7 +24,7 @@ Unicorn.prototype.randomInt = function(min, max) {
 
 Unicorn.prototype.generateRandomStyle = function() {
     var self = this;
-    var side = self.randomInt(0, 400) + "px";
+    var side = self.randomInt(0, 250) + "px";
     return {
         top: self.randomInt(0, 600) + "px"
       , left: self.randomInt(0, 1000) + "px"
