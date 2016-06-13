@@ -30,6 +30,7 @@ Unicorn.prototype.generateRandomStyle = function() {
       , left: self.randomInt(0, $(window).width() - side) + 'px'
       , width: side + 'px'
       , height: side + 'px'
+      , unicornsRotation: self.randomInt(0, 360) + 'deg'
     };
 };
 
@@ -43,7 +44,9 @@ Unicorn.prototype.nextMove = function() {
         complete: self.nextMove.bind(self)
       , duration: self.randomInt(400, 1000)
       , step: function(now, fx) {
-          self.el.css('transform', 'rotate(' + now + 'deg)');
+          if (fx.prop == 'unicornsRotation') {
+              self.el.css('transform', 'rotate(' + now + 'deg)');
+          }
       }
     });
 };
