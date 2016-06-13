@@ -41,5 +41,8 @@ Unicorn.prototype.nextMove = function() {
     var self = this;
     self.el.animate(self.generateRandomStyle(), {
         complete: self.nextMove.bind(self)
+      , step: function(now, fx) {
+          self.el.css('transform', 'rotate(' + now + 'deg)');
+      }
     });
 };

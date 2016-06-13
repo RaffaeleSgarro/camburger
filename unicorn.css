@@ -4,4 +4,5 @@
     width: 100px;
     height: 100px;
     background-size: 100%;
+    transform: rotate(0deg);
 }
