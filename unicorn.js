@@ -41,6 +41,7 @@ Unicorn.prototype.nextMove = function() {
     var self = this;
     self.el.animate(self.generateRandomStyle(), {
         complete: self.nextMove.bind(self)
+      , duration: self.randomInt(400, 1000)
       , step: function(now, fx) {
           self.el.css('transform', 'rotate(' + now + 'deg)');
       }
