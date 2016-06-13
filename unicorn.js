@@ -3,9 +3,9 @@ var Unicorns = function(options) {};
 Unicorns.prototype.start = function() {
     var unicorn;
     var i;
-    for (i = 0; i < 12; i++) {
+    for (i = 0; i < 10; i++) {
         unicorn = new Unicorn({});
-        unicorn.el.appendTo($("body"));
+        unicorn.el.appendTo($('body'));
         unicorn.moveRandom();
     }
 };
@@ -24,12 +24,12 @@ Unicorn.prototype.randomInt = function(min, max) {
 
 Unicorn.prototype.generateRandomStyle = function() {
     var self = this;
-    var side = self.randomInt(0, 250) + "px";
+    var side = self.randomInt(0, 250) ;
     return {
-        top: self.randomInt(0, 600) + "px"
-      , left: self.randomInt(0, 1000) + "px"
-      , width: side
-      , height: side
+        top: self.randomInt(0, $(window).height() - side) + 'px'
+      , left: self.randomInt(0, $(window).width() - side) + 'px'
+      , width: side + 'px'
+      , height: side + 'px'
     };
 };
 
