@@ -55,12 +55,22 @@ Camburger.Sidebar.prototype.hide = function() {
 };
 
 Camburger.Sidebar.prototype.toggle = function() {
-    // TODO debounce
-    if (this.open) {
-        this.hide();
-    } else {
-        this.show();
+    var self = this;
+    if (self.animating) {
+        return;
     }
+    
+    self.animating = true;
+    
+    if (self.open) {
+        self.hide();
+    } else {
+        self.show();
+    }
+    
+    setTimeout(function(){
+        self.animating = false;
+    }, 400);
 };
 
 Camburger.Sidebar.prototype.publish = function(topic, data) {

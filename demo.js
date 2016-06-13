@@ -33,4 +33,10 @@ $(function() {
     sidebar.subscribe('item:click', function(ctx, item){
         console.log('Clicked ' + item.title);
     });
+    
+    $(document).keypress(function(e){
+        if (e.key == ' ' && e.ctrlKey) {
+            window.sidebar.toggle();
+        }
+    });
 });
