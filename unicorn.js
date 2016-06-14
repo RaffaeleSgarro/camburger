@@ -30,7 +30,7 @@ Unicorn.prototype.generateRandomStyle = function() {
       , left: self.randomInt(0, $(window).width() - side) + 'px'
       , width: side + 'px'
       , height: side + 'px'
-      , unicornsRotation: self.randomInt(0, 360) + 'deg'
+      , 'font-size': self.randomInt(0, 360) + 'px' // hack: use a random valid property
     };
 };
 
@@ -44,7 +44,8 @@ Unicorn.prototype.nextMove = function() {
         complete: self.nextMove.bind(self)
       , duration: self.randomInt(400, 1000)
       , step: function(now, fx) {
-          if (fx.prop == 'unicornsRotation') {
+          // font-size is passed as fontSize. Not a typo
+          if (fx.prop == 'fontSize') {
               self.el.css('transform', 'rotate(' + now + 'deg)');
           }
       }
