@@ -40,8 +40,8 @@ Unicorn.prototype.randomInt = function(min, max) {
 Unicorn.prototype.generateRandomStyle = function() {
     var self = this;
     return {
-        top: self.randomInt(0, $(window).height()) + 'px'
-      , left: self.randomInt(0, $(window).width()) + 'px'
+        top: self.randomInt(0, window.innerHeight) + 'px'
+      , left: self.randomInt(0, window.innerWidth) + 'px'
       , zoom: Math.random()
       , 'font-size': self.randomInt(0, 360) + 'px' // hack: use a random valid property
     };
