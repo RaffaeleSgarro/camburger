@@ -5,6 +5,7 @@ Camburger.Sidebar = function(options) {
 
     this.open = options.open;
     this.showUnicorns = options.showUnicorns;
+    this.animationsDuration = options.animationsDuration || 'fast';
 
     this.history = new Camburger.History({sidebar: self});
     this.dim = $('<div class="camburger-dim"></div>');
@@ -76,6 +77,7 @@ Camburger.Sidebar.prototype.show = function() {
         self.setMenu(self.history.beginning());
         self.publish('show');
         self.el.animate({left: 0}, {
+            duration: self.animationsDuration,
             complete: function() {
                 self.open = true;
             }
@@ -93,6 +95,7 @@ Camburger.Sidebar.prototype.hide = function() {
         this.dim.fadeOut();
         this.publish('hide');
         this.el.animate({left: -width + 'px'}, {
+            duration: self.animationsDuration,
             complete: function onHideAnimationCompleted() {
                 self.open = false;
                 self.dim.css({visibility: 'visible'});
@@ -433,12 +436,14 @@ Camburger.Panels.prototype.swap = function(panel, inInitial, outAnimation) {
         left: 0,
         right: 0,
     }, {
+        duration: self.sidebar.animationsDuration,
         complete: function() {
             self.el.scrollTop(0);
         }
     });
 
     this.currentPanel.el.animate(outAnimation, {
+        duration: self.sidebar.animationsDuration,
         complete: function() {
             this.remove();
             self.setCurrentPanel(panel);
