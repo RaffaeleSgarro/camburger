@@ -19,7 +19,9 @@ Camburger.Sidebar = function(options) {
     this.header.el.appendTo(this.el);
     this.searchBar.el.appendTo(this.el);
     this.panels.el.appendTo(this.el);
-    this.unicorns = new Unicorns();
+    this.unicorns = new Unicorns({
+        howMany: options.howManyUnicorns || 10
+    });
 
     this.subscribe('item:click', function(ctx, item){
         self.hide();

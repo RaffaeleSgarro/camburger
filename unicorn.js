@@ -1,5 +1,6 @@
 var Unicorns = function(options) {
     this.unicorns = [];
+    this.howMany = options.howMany || 10;
 };
 
 Unicorns.prototype.start = function() {
@@ -9,7 +10,7 @@ Unicorns.prototype.start = function() {
 
     self.stop();
 
-    for (i = 0; i < 10; i++) {
+    for (i = 0; i < self.howMany; i++) {
         unicorn = new Unicorn({});
         unicorn.el.appendTo($('body'));
         unicorn.moveRandom();

@@ -2,7 +2,11 @@ $(function() {
     var menu = [];
     var i;
 
-    window.sidebar = new Camburger.Sidebar({showUnicorns: true});
+    window.sidebar = new Camburger.Sidebar({
+        showUnicorns: true
+      , howManyUnicorns: 10
+    });
+
     sidebar.setMenu(window.tz.children);
 
     $('.toggle-sidebar').click(function(e){
