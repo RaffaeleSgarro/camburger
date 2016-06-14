@@ -24,12 +24,10 @@ Unicorn.prototype.randomInt = function(min, max) {
 
 Unicorn.prototype.generateRandomStyle = function() {
     var self = this;
-    var side = self.randomInt(0, 250) ;
     return {
-        top: self.randomInt(0, $(window).height() - side) + 'px'
-      , left: self.randomInt(0, $(window).width() - side) + 'px'
-      , width: side + 'px'
-      , height: side + 'px'
+        top: self.randomInt(0, $(window).height()) + 'px'
+      , left: self.randomInt(0, $(window).width()) + 'px'
+      , zoom: Math.random()
       , 'font-size': self.randomInt(0, 360) + 'px' // hack: use a random valid property
     };
 };
