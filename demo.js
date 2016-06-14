@@ -2,7 +2,7 @@ $(function() {
     var menu = [];
     var i;
 
-    window.sidebar = new Camburger.Sidebar({});
+    window.sidebar = new Camburger.Sidebar({showUnicorns: true});
     sidebar.setMenu(window.tz.children);
 
     $('.toggle-sidebar').click(function(e){
@@ -18,11 +18,4 @@ $(function() {
             window.sidebar.toggle();
         }
     });
-
-    var unicorns = new Unicorns();
-    unicorns.start();
-
-    setTimeout(function(){
-        unicorns.stop();
-    }, 2000);
 });

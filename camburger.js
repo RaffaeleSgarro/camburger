@@ -4,6 +4,7 @@ Camburger.Sidebar = function(options) {
     var self = this;
 
     this.open = true;
+    this.showUnicorns = options.showUnicorns;
 
     this.history = new Camburger.History({sidebar: self});
     this.dim = $('<div class="camburger-dim"></div>');
@@ -18,6 +19,7 @@ Camburger.Sidebar = function(options) {
     this.header.el.appendTo(this.el);
     this.searchBar.el.appendTo(this.el);
     this.panels.el.appendTo(this.el);
+    this.unicorns = new Unicorns();
 
     this.subscribe('item:click', function(ctx, item){
         self.hide();
@@ -33,6 +35,10 @@ Camburger.Sidebar = function(options) {
 
     if (this.open) {
         this.publish('show');
+    }
+
+    if (this.showUnicorns) {
+        this.unicorns.start();
     }
 };
 
@@ -69,7 +75,9 @@ Camburger.Sidebar.prototype.show = function() {
                 self.open = true;
             }
         });
-
+        if (self.showUnicorns) {
+            self.unicorns.start();
+        }
     }
 };
 
@@ -82,6 +90,9 @@ Camburger.Sidebar.prototype.hide = function() {
         this.el.animate({left: -width + 'px'}, {
             complete: function() { self.open = false; }
         });
+        if (self.showUnicorns) {
+            self.unicorns.stop();
+        }
     }
 };
 
