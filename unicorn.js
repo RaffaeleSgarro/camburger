@@ -48,7 +48,7 @@ Unicorn.prototype.generateRandomStyle = function() {
 };
 
 Unicorn.prototype.moveRandom = function() {
-    this.el.animate({opacity: 1});
+    this.el.animate({opacity: 1}, {queue: false});
     this.nextMove();
 };
 
