@@ -64,7 +64,7 @@ Unicorn.prototype.nextMove = function() {
     } else {
         self.el.animate(self.generateRandomStyle(), {
             complete: self.nextMove.bind(self)
-          , duration: self.randomInt(400, 1000)
+          , duration: self.randomInt(1000, 2000)
           , step: function(now, fx) {
               // font-size is passed as fontSize. Not a typo
               if (fx.prop == 'fontSize') {
