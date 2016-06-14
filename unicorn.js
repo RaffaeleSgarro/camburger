@@ -1,13 +1,28 @@
-var Unicorns = function(options) {};
+var Unicorns = function(options) {
+    this.unicorns = [];
+};
 
 Unicorns.prototype.start = function() {
     var unicorn;
     var i;
+    var self = this;
+
+    self.stop();
+
     for (i = 0; i < 10; i++) {
         unicorn = new Unicorn({});
         unicorn.el.appendTo($('body'));
         unicorn.moveRandom();
+        self.unicorns.push(unicorn);
     }
+};
+
+Unicorns.prototype.stop = function() {
+    $.each(this.unicorns, function(i, unicorn){
+        unicorn.destroy();
+    });
+
+    this.unicorns = [];
 };
 
 var Unicorn = function(options) {
@@ -38,14 +53,27 @@ Unicorn.prototype.moveRandom = function() {
 
 Unicorn.prototype.nextMove = function() {
     var self = this;
-    self.el.animate(self.generateRandomStyle(), {
-        complete: self.nextMove.bind(self)
-      , duration: self.randomInt(400, 1000)
-      , step: function(now, fx) {
-          // font-size is passed as fontSize. Not a typo
-          if (fx.prop == 'fontSize') {
-              self.el.css('transform', 'rotate(' + now + 'deg)');
+
+    if (self.destroyed) {
+        self.el.animate({opacity: 0}, {
+            complete: function() {
+                self.el.remove();
+            }
+        });
+    } else {
+        self.el.animate(self.generateRandomStyle(), {
+            complete: self.nextMove.bind(self)
+          , duration: self.randomInt(400, 1000)
+          , step: function(now, fx) {
+              // font-size is passed as fontSize. Not a typo
+              if (fx.prop == 'fontSize') {
+                  self.el.css('transform', 'rotate(' + now + 'deg)');
+              }
           }
-      }
-    });
+        });
+    }
+};
+
+Unicorn.prototype.destroy = function() {
+    this.destroyed = true;
 };

@@ -21,4 +21,8 @@ $(function() {
 
     var unicorns = new Unicorns();
     unicorns.start();
+
+    setTimeout(function(){
+        unicorns.stop();
+    }, 2000);
 });
