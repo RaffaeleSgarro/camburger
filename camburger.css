@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 0;
+  left: -300px;
   width: 300px;
   background-color: #E8E8E8;
   color: #1F1F1F;
@@ -82,4 +82,5 @@
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.2);
+  visibility: hidden;
 }

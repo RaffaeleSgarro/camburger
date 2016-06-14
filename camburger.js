@@ -3,7 +3,7 @@ Camburger = {};
 Camburger.Sidebar = function(options) {
     var self = this;
 
-    this.open = true;
+    this.open = options.open;
     this.showUnicorns = options.showUnicorns;
 
     this.history = new Camburger.History({sidebar: self});
@@ -36,6 +36,8 @@ Camburger.Sidebar = function(options) {
     });
 
     if (this.open) {
+        this.dim.css({visibility: 'visible'});
+        this.el.css({left: 0});
         this.publish('show');
     }
 
@@ -68,6 +70,7 @@ Camburger.Sidebar.prototype.setMenu = function(menu) {
 Camburger.Sidebar.prototype.show = function() {
     var self = this;
     if (!self.open) {
+        self.dim.css({visibility: 'visible'});
         self.dim.fadeIn();
         self.lastSearchText = false;
         self.setMenu(self.history.beginning());
@@ -90,7 +93,10 @@ Camburger.Sidebar.prototype.hide = function() {
         this.dim.fadeOut();
         this.publish('hide');
         this.el.animate({left: -width + 'px'}, {
-            complete: function() { self.open = false; }
+            complete: function onHideAnimationCompleted() {
+                self.open = false;
+                self.dim.css({visibility: 'visible'});
+            }
         });
         if (self.showUnicorns) {
             self.unicorns.stop();

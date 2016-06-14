@@ -2,10 +2,7 @@ $(function() {
     var menu = [];
     var i;
 
-    window.sidebar = new Camburger.Sidebar({
-        showUnicorns: true
-      , howManyUnicorns: 10
-    });
+    window.sidebar = new Camburger.Sidebar(window.camburgerOptions || {});
 
     sidebar.setMenu(window.tz.children);
 
