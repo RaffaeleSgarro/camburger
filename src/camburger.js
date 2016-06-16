@@ -311,6 +311,11 @@ Camburger.SearchBar.prototype.onKeyup = function(e) {
         return;
     }
 
+    if (e.key == 'Escape') {
+        self.sidebar.hide();
+        return;
+    }
+
     self.lastSearchText = self.searchField.val();
 
     setTimeout(function(){
