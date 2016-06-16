@@ -174,6 +174,12 @@ Camburger.SearchIndex.prototype.search = function(text) {
         }
     });
 
+    result.sort(function(thisHit, thatHit){
+        var thisScore = thisHit.favourite ? 1 : 0;
+        var thatScore = thatHit.favourite ? 1 : 0;
+        return thatScore - thisScore;
+    });
+
     return result;
 };
 
