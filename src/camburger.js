@@ -363,12 +363,12 @@ Camburger.Panels.prototype.showSearchResult = function(children) {
         self.searchPanel.setItems(children);
         self.searchPanel.resetKeyboardSelection();
     } else {
-      self.searchPanel = new Camburger.Panel({
-          sidebar: self.sidebar
-        , items: children
-      });
+        self.searchPanel = new Camburger.Panel({
+            sidebar: self.sidebar
+          , items: children
+        });
 
-      self.swapToLeft(self.searchPanel);
+        self.swapToLeft(self.searchPanel);
     }
 };
 
