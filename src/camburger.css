@@ -43,12 +43,14 @@
   left: 0;
   right: 0;
   border-top: 1px solid #CCCCCC;
+  background-color: #E8E8E8;
 }
 
 .camburger-sidebar .panel {
   position: absolute;
   left: 0;
   right: 0;
+  background-color: #E8E8E8;
 }
 
 .camburger-sidebar .item {
