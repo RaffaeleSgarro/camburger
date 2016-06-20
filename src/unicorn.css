@@ -8,4 +8,5 @@
     transform: rotate(0deg);
     opacity: 0;
     z-index: 100000;
+    pointer-events: none;
 }
