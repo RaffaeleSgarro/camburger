@@ -21,8 +21,11 @@ Camburger.Sidebar = function(options) {
     this.searchBar.el.appendTo(this.el);
     this.panels.el.appendTo(this.el);
     this.unicorns = new Unicorns({
-        howMany: options.howManyUnicorns || 10
+        howMany: options.howManyUnicorns || 10,
+        unicornImgSrc: options.unicornImgSrc
     });
+
+    this.unicorns.el.appendTo($('body'));
 
     this.subscribe('item:click', function(ctx, item){
         self.hide();
