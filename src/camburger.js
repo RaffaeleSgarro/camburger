@@ -317,7 +317,7 @@ Camburger.SearchBar.prototype.onKeyup = function(e) {
         return;
     }
 
-    if (e.key == 'Escape') {
+    if (e.which == 27) { // e.key == 'Escape'
         self.sidebar.hide();
         return;
     }
@@ -388,14 +388,14 @@ Camburger.Panels.prototype.onKeyboardEvent = function(e) {
     if (!this.sidebar.open || !this.currentPanel)
         return;
 
-    switch (e.key) {
-        case 'ArrowUp':
+    switch (e.which) { // e.key
+        case 38: // 'ArrowUp'
             this.currentPanel.moveKeyboardSelection(-1);
             break;
-        case 'ArrowDown':
+        case 40: // 'ArrowDown'
             this.currentPanel.moveKeyboardSelection(+1);
             break;
-        case 'Enter':
+        case 13: // 'Enter'
             this.currentPanel.keyboardSelection().onClick();
             break;
     }
