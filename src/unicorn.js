@@ -30,6 +30,7 @@ Unicorns.prototype.start = function() {
     self.stop();
 
     self.stopped = false;
+    self.unicorns = [];
 
     for (i = 0; i < self.howMany; i++) {
         unicorn = new Unicorn({img: self.img[0]});
@@ -49,7 +50,7 @@ Unicorns.prototype.step = function() {
         unicorn.draw(self.ctx);
     });
 
-    if (!self.stopped) {
+    if (!self.stopped || (self.stopAnimationEnds && Date.now() < self.stopAnimationEnds)) {
         window.requestAnimationFrame(self.step.bind(self));
     }
 };
@@ -61,9 +62,8 @@ Unicorns.prototype.stop = function() {
 
     $.each(self.unicorns, function(i, unicorn){
         unicorn.destroy();
+        self.stopAnimationEnds = Math.max(unicorn.currentMoveEnds, self.stopAnimationEnds || 0);
     });
-
-    self.unicorns = [];
 
     self.ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
 };
@@ -94,15 +94,18 @@ Unicorn.prototype.randomInt = function(min, max) {
 };
 
 Unicorn.prototype.destroy = function() {
+    var currentAlphaEffect;
+    this.destroyed = true;
     if (this.currentMove) {
-        this.currentMove.alpha.endValue = 0;
+        currentAlphaEffect = this.currentMove.alpha;
+        this.currentMove.alpha = new Effect({startValue: this.alpha, endValue: 0, duration: currentAlphaEffect.remainingTime()});
     }
 };
 
 Unicorn.prototype.move = function() {
     var self = this;
 
-    if (!self.currentMove || Date.now() > self.currentMoveEnds) {
+    if (!self.destroyed && (!self.currentMove || Date.now() > self.currentMoveEnds)) {
         self.currentMoveDuration = self.randomInt(1500, 2500);
         self.currentMoveEnds = Date.now() + self.currentMoveDuration;
         self.currentMove = {
@@ -131,16 +134,20 @@ Effect.prototype.val = function() {
     var val;
     var currentTimeMillis = Date.now();
 
-    if (this.start && (currentTimeMillis > this.start + this.duration)) {
-        val = this.endValue;
-    }
-
-    if (this.start) {
-        val = (this.endValue - this.startValue) / this.duration * (currentTimeMillis - this.start) + this.startValue;
+    if (this.startTime) {
+        if (this.remainingTime() > 0) {
+            val = (this.endValue - this.startValue) / this.duration * (currentTimeMillis - this.startTime) + this.startValue;
+        } else {
+            val = this.endValue;
+        }
     } else {
-        this.start = currentTimeMillis;
+        this.startTime = currentTimeMillis;
         val = this.startValue;
     }
 
     return val;
+};
+
+Effect.prototype.remainingTime = function() {
+    return Math.max(0, this.startTime + this.duration - Date.now());
 };
