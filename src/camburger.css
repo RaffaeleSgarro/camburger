@@ -1,0 +1,90 @@
+.camburger-sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -300px;
+  width: 300px;
+  background-color: #E8E8E8;
+  color: #1F1F1F;
+  box-shadow: 3px 0 3px 1px rgba(0, 0, 0, 0.1);
+  z-index: 90000;
+}
+
+.camburger-sidebar .header {
+  height: 60px;
+  padding: 10px 20px;
+  line-height: 60px;
+  color: white;
+  background-color: #3683D6;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.camburger-sidebar .search-bar {
+  padding: 10px;
+}
+
+.camburger-sidebar .search-bar .search-field {
+  font-size: 1em;
+  line-height: 1em;
+  height: 2em;
+  padding: 3px;
+  width: 280px;
+}
+
+.camburger-sidebar .panels {
+  overflow-x: hidden;
+  overflow-y: normal;
+  position: absolute;
+  top: 130px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #CCCCCC;
+  background-color: #E8E8E8;
+}
+
+.camburger-sidebar .panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #E8E8E8;
+}
+
+.camburger-sidebar .item {
+  position: relative;
+  padding: 10px 30px 10px 10px;
+  border-bottom: 1px solid #CCCCCC;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+  cursor: pointer;
+}
+
+.camburger-sidebar .item.kbd-selection {
+  background-color: white;
+}
+
+.camburger-sidebar .item .fa-stack .fa-circle {
+  color: #3683D6;
+}
+
+.camburger-sidebar .item .toggle-favourite {
+  position: absolute;
+  top: 18px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.camburger-dim {
+  position: fixed;
+  z-index: 80000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+}

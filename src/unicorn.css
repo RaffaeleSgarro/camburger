@@ -1,0 +1,11 @@
+.unicorn-bitmap {
+    display: none;
+}
+
+.unicorns {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    pointer-events: none;
+}
