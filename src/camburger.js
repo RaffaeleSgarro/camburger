@@ -305,9 +305,11 @@ Camburger.SearchBar = function(options) {
     + '</div>');
     this.searchField = this.el.find('.search-field');
     this.sidebar.subscribe('show', function(){
-        var searchField = self.el.find('.search-field');
-        searchField.focus();
-        searchField.val('');
+        self.searchField.focus();
+        self.searchField.val('');
+    });
+    this.sidebar.subscribe('hide', function(){
+        self.searchField.blur();
     });
     this.searchField.keyup(function(e){
         self.onKeyup(e);

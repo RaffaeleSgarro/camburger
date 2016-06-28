@@ -15,8 +15,17 @@ $(function() {
     });
 
     $(document).keypress(function(e){
-        if (e.key == ' ' && e.ctrlKey) {
+        var focused = $(document.activeElement);
+
+        if (focused
+            && focused[0].nodeName.toLowerCase() == 'input'
+            && focused.attr("type") == 'text') {
+            return;
+        }
+
+        if (e.key == 'c') {
             window.sidebar.toggle();
+            return false;
         }
     });
 });
