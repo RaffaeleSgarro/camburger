@@ -536,7 +536,11 @@ Camburger.MenuItem = function(options) {
 
     this.el.click(function(e){ self.onClick(e); });
 
-    this.el.find(".toggle-favourite").click(function(e){ self.onToggleFavourite(e); });
+    this.el.find(".toggle-favourite").click(function(e){
+        if (self.isLeaf()) {
+            self.onToggleFavourite(e);
+        }
+    });
 
     this.render();
 };
@@ -546,17 +550,24 @@ Camburger.MenuItem.prototype.isLeaf = function() {
 };
 
 Camburger.MenuItem.prototype.render = function() {
-    var indicator = this.el.find(".toggle-favourite i");
+    var indicator;
 
     $(".icon", this.el).addClass("fa-" + this.data.icon);
     $(".text", this.el).text(this.data.title);
 
-    if (this.data.favourite) {
-        indicator.addClass('fa-star');
-        indicator.removeClass('fa-star-o');
+    if (this.isLeaf()) {
+        indicator = this.el.find(".toggle-favourite i");
+        if (this.data.favourite) {
+            indicator.addClass('fa-star');
+            indicator.removeClass('fa-star-o');
+        } else {
+            indicator.addClass('fa-star-o');
+            indicator.removeClass('fa-star');
+        }
     } else {
-        indicator.addClass('fa-star-o');
-        indicator.removeClass('fa-star');
+        this.el.find('.toggle-favourite').css({
+            visibility: 'hidden'
+        });
     }
 };
 
