@@ -57,6 +57,7 @@
   position: relative;
   padding: 10px 30px 10px 10px;
   border-bottom: 1px solid #CCCCCC;
+  background-color: #E8E8E8;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow-x: hidden;
