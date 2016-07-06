@@ -82,12 +82,10 @@ Camburger.Sidebar.prototype.onSearch = function(searchText) {
     var self = this;
 
     if (searchText && searchText.length > 0) {
-        if (searchText != self.lastSearchText) {
-            self.lastSearchText = searchText;
-            self.searchResult = self.searchIndex.search(searchText);
-            self.header.showSearchResult(searchText);
-            self.panels.showSearchResult(self.searchResult);
-        }
+        self.lastSearchText = searchText;
+        self.searchResult = self.searchIndex.search(searchText);
+        self.header.showSearchResult(searchText);
+        self.panels.showSearchResult(self.searchResult);
     } else {
         self.header.clearSearchResult();
         self.panels.clearSearchResult();
