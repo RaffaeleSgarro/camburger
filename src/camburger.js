@@ -14,7 +14,7 @@ Camburger.Sidebar = function(options) {
     this.header = new Camburger.Header({sidebar: self});
     this.searchBar = new Camburger.SearchBar({sidebar: self});
     this.panels = new Camburger.Panels({sidebar: self});
-    this.searchIndex = new Camburger.SearchIndex({});
+    this.searchIndex = new Camburger.SearchIndex({sidebar: self});
 
     this.dim.appendTo($('body'));
     this.el.appendTo($('body'));
@@ -167,6 +167,7 @@ Camburger.Sidebar.prototype.subscribe = function(topic, callback) {
 };
 
 Camburger.SearchIndex = function(options) {
+    this.sidebar = options.sidebar;
     this.titleIndex = [];
     this.idLookup = {};
 };
@@ -211,8 +212,8 @@ Camburger.SearchIndex.prototype.search = function(text) {
     });
 
     result.sort(function(thisHit, thatHit){
-        var thisScore = thisHit.favourite ? 1 : 0;
-        var thatScore = thatHit.favourite ? 1 : 0;
+        var thisScore = thisHit.id && self.sidebar.quickStart.indexOf(thisHit.id) > -1 ? 1 : 0;
+        var thatScore = thatHit.id && self.sidebar.quickStart.indexOf(thatHit.id) > -1 ? 1 : 0;
         return thatScore - thisScore;
     });
 
