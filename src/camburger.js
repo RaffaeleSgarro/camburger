@@ -542,8 +542,24 @@ Camburger.Panel.prototype.setItems = function(stickyItemIds, normalItems) {
         containment: 'parent'
     });
 
+    self.stickyEl.on("sortstart", function onQuickStartItemStartDrag(event, ui){
+        self.indexOnDragStart = ui.item.index();
+        self.selectionIndexOnDragStart = self.selectionIndex;
+    });
+
     self.stickyEl.on("sortstop", function onQuickStartReordered(event, ui) {
         var idList = [];
+        var indexOnDragEnd = ui.item.index();
+        var tmp;
+        var seq = [];
+
+        tmp = self.items.splice(self.indexOnDragStart, 1)[0];
+        self.items.splice(indexOnDragEnd, 0, tmp);
+
+        $.each(self.items, function(i){ seq.push(i); });
+        tmp = seq.splice(self.indexOnDragStart, 1)[0];
+        seq.splice(indexOnDragEnd, 1, tmp);
+        self.selectionIndex = seq.indexOf(self.selectionIndexOnDragStart);
 
         self.stickyEl.children().each(function(i, menuItemEl){
             idList.push($(menuItemEl).data('menu-id'));
