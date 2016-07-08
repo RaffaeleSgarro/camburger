@@ -6,326 +6,326 @@ window.tz = {
       "id": 1,
       "children": [
         {
-          "title": "Abidjan",
-          "icon": "file",
+          "title": "Abidjas",
+          "icon": "file-o",
           "id": 2,
           "children": []
         },
         {
           "title": "Accra",
-          "icon": "file",
+          "icon": "file-o",
           "id": 3,
           "children": []
         },
         {
           "title": "Addis_Ababa",
-          "icon": "file",
+          "icon": "file-o",
           "id": 4,
           "children": []
         },
         {
           "title": "Algiers",
-          "icon": "file",
+          "icon": "file-o",
           "id": 5,
           "children": []
         },
         {
           "title": "Asmara",
-          "icon": "file",
+          "icon": "file-o",
           "id": 6,
           "children": []
         },
         {
           "title": "Asmera",
-          "icon": "file",
+          "icon": "file-o",
           "id": 7,
           "children": []
         },
         {
           "title": "Bamako",
-          "icon": "file",
+          "icon": "file-o",
           "id": 8,
           "children": []
         },
         {
           "title": "Bangui",
-          "icon": "file",
+          "icon": "file-o",
           "id": 9,
           "children": []
         },
         {
           "title": "Banjul",
-          "icon": "file",
+          "icon": "file-o",
           "id": 10,
           "children": []
         },
         {
           "title": "Bissau",
-          "icon": "file",
+          "icon": "file-o",
           "id": 11,
           "children": []
         },
         {
           "title": "Blantyre",
-          "icon": "file",
+          "icon": "file-o",
           "id": 12,
           "children": []
         },
         {
           "title": "Brazzaville",
-          "icon": "file",
+          "icon": "file-o",
           "id": 13,
           "children": []
         },
         {
           "title": "Bujumbura",
-          "icon": "file",
+          "icon": "file-o",
           "id": 14,
           "children": []
         },
         {
           "title": "Cairo",
-          "icon": "file",
+          "icon": "file-o",
           "id": 15,
           "children": []
         },
         {
           "title": "Casablanca",
-          "icon": "file",
+          "icon": "file-o",
           "id": 16,
           "children": []
         },
         {
           "title": "Ceuta",
-          "icon": "file",
+          "icon": "file-o",
           "id": 17,
           "children": []
         },
         {
           "title": "Conakry",
-          "icon": "file",
+          "icon": "file-o",
           "id": 18,
           "children": []
         },
         {
           "title": "Dakar",
-          "icon": "file",
+          "icon": "file-o",
           "id": 19,
           "children": []
         },
         {
           "title": "Dar_es_Salaam",
-          "icon": "file",
+          "icon": "file-o",
           "id": 20,
           "children": []
         },
         {
           "title": "Djibouti",
-          "icon": "file",
+          "icon": "file-o",
           "id": 21,
           "children": []
         },
         {
           "title": "Douala",
-          "icon": "file",
+          "icon": "file-o",
           "id": 22,
           "children": []
         },
         {
           "title": "El_Aaiun",
-          "icon": "file",
+          "icon": "file-o",
           "id": 23,
           "children": []
         },
         {
           "title": "Freetown",
-          "icon": "file",
+          "icon": "file-o",
           "id": 24,
           "children": []
         },
         {
           "title": "Gaborone",
-          "icon": "file",
+          "icon": "file-o",
           "id": 25,
           "children": []
         },
         {
           "title": "Harare",
-          "icon": "file",
+          "icon": "file-o",
           "id": 26,
           "children": []
         },
         {
           "title": "Johannesburg",
-          "icon": "file",
+          "icon": "file-o",
           "id": 27,
           "children": []
         },
         {
           "title": "Juba",
-          "icon": "file",
+          "icon": "file-o",
           "id": 28,
           "children": []
         },
         {
           "title": "Kampala",
-          "icon": "file",
+          "icon": "file-o",
           "id": 29,
           "children": []
         },
         {
           "title": "Khartoum",
-          "icon": "file",
+          "icon": "file-o",
           "id": 30,
           "children": []
         },
         {
           "title": "Kigali",
-          "icon": "file",
+          "icon": "file-o",
           "id": 31,
           "children": []
         },
         {
           "title": "Kinshasa",
-          "icon": "file",
+          "icon": "file-o",
           "id": 32,
           "children": []
         },
         {
           "title": "Lagos",
-          "icon": "file",
+          "icon": "file-o",
           "id": 33,
           "children": []
         },
         {
           "title": "Libreville",
-          "icon": "file",
+          "icon": "file-o",
           "id": 34,
           "children": []
         },
         {
           "title": "Lome",
-          "icon": "file",
+          "icon": "file-o",
           "id": 35,
           "children": []
         },
         {
           "title": "Luanda",
-          "icon": "file",
+          "icon": "file-o",
           "id": 36,
           "children": []
         },
         {
           "title": "Lubumbashi",
-          "icon": "file",
+          "icon": "file-o",
           "id": 37,
           "children": []
         },
         {
           "title": "Lusaka",
-          "icon": "file",
+          "icon": "file-o",
           "id": 38,
           "children": []
         },
         {
           "title": "Malabo",
-          "icon": "file",
+          "icon": "file-o",
           "id": 39,
           "children": []
         },
         {
           "title": "Maputo",
-          "icon": "file",
+          "icon": "file-o",
           "id": 40,
           "children": []
         },
         {
           "title": "Maseru",
-          "icon": "file",
+          "icon": "file-o",
           "id": 41,
           "children": []
         },
         {
           "title": "Mbabane",
-          "icon": "file",
+          "icon": "file-o",
           "id": 42,
           "children": []
         },
         {
           "title": "Mogadishu",
-          "icon": "file",
+          "icon": "file-o",
           "id": 43,
           "children": []
         },
         {
           "title": "Monrovia",
-          "icon": "file",
+          "icon": "file-o",
           "id": 44,
           "children": []
         },
         {
           "title": "Nairobi",
-          "icon": "file",
+          "icon": "file-o",
           "id": 45,
           "children": []
         },
         {
           "title": "Ndjamena",
-          "icon": "file",
+          "icon": "file-o",
           "id": 46,
           "children": []
         },
         {
           "title": "Niamey",
-          "icon": "file",
+          "icon": "file-o",
           "id": 47,
           "children": []
         },
         {
           "title": "Nouakchott",
-          "icon": "file",
+          "icon": "file-o",
           "id": 48,
           "children": []
         },
         {
           "title": "Ouagadougou",
-          "icon": "file",
+          "icon": "file-o",
           "id": 49,
           "children": []
         },
         {
           "title": "Porto-Novo",
-          "icon": "file",
+          "icon": "file-o",
           "id": 50,
           "children": []
         },
         {
           "title": "Sao_Tome",
-          "icon": "file",
+          "icon": "file-o",
           "id": 51,
           "children": []
         },
         {
           "title": "Timbuktu",
-          "icon": "file",
+          "icon": "file-o",
           "id": 52,
           "children": []
         },
         {
           "title": "Tripoli",
-          "icon": "file",
+          "icon": "file-o",
           "id": 53,
           "children": []
         },
         {
           "title": "Tunis",
-          "icon": "file",
+          "icon": "file-o",
           "id": 54,
           "children": []
         },
         {
           "title": "Windhoek",
-          "icon": "file",
+          "icon": "file-o",
           "id": 55,
           "children": []
         }
@@ -338,31 +338,31 @@ window.tz = {
       "children": [
         {
           "title": "Adak",
-          "icon": "file",
+          "icon": "file-o",
           "id": 57,
           "children": []
         },
         {
           "title": "Anchorage",
-          "icon": "file",
+          "icon": "file-o",
           "id": 58,
           "children": []
         },
         {
           "title": "Anguilla",
-          "icon": "file",
+          "icon": "file-o",
           "id": 59,
           "children": []
         },
         {
           "title": "Antigua",
-          "icon": "file",
+          "icon": "file-o",
           "id": 60,
           "children": []
         },
         {
           "title": "Araguaina",
-          "icon": "file",
+          "icon": "file-o",
           "id": 61,
           "children": []
         },
@@ -373,79 +373,79 @@ window.tz = {
           "children": [
             {
               "title": "Buenos_Aires",
-              "icon": "file",
+              "icon": "file-o",
               "id": 63,
               "children": []
             },
             {
               "title": "Catamarca",
-              "icon": "file",
+              "icon": "file-o",
               "id": 64,
               "children": []
             },
             {
               "title": "ComodRivadavia",
-              "icon": "file",
+              "icon": "file-o",
               "id": 65,
               "children": []
             },
             {
               "title": "Cordoba",
-              "icon": "file",
+              "icon": "file-o",
               "id": 66,
               "children": []
             },
             {
               "title": "Jujuy",
-              "icon": "file",
+              "icon": "file-o",
               "id": 67,
               "children": []
             },
             {
               "title": "La_Rioja",
-              "icon": "file",
+              "icon": "file-o",
               "id": 68,
               "children": []
             },
             {
               "title": "Mendoza",
-              "icon": "file",
+              "icon": "file-o",
               "id": 69,
               "children": []
             },
             {
               "title": "Rio_Gallegos",
-              "icon": "file",
+              "icon": "file-o",
               "id": 70,
               "children": []
             },
             {
               "title": "Salta",
-              "icon": "file",
+              "icon": "file-o",
               "id": 71,
               "children": []
             },
             {
               "title": "San_Juan",
-              "icon": "file",
+              "icon": "file-o",
               "id": 72,
               "children": []
             },
             {
               "title": "San_Luis",
-              "icon": "file",
+              "icon": "file-o",
               "id": 73,
               "children": []
             },
             {
               "title": "Tucuman",
-              "icon": "file",
+              "icon": "file-o",
               "id": 74,
               "children": []
             },
             {
               "title": "Ushuaia",
-              "icon": "file",
+              "icon": "file-o",
               "id": 75,
               "children": []
             }
@@ -453,325 +453,325 @@ window.tz = {
         },
         {
           "title": "Aruba",
-          "icon": "file",
+          "icon": "file-o",
           "id": 76,
           "children": []
         },
         {
           "title": "Asuncion",
-          "icon": "file",
+          "icon": "file-o",
           "id": 77,
           "children": []
         },
         {
           "title": "Atikokan",
-          "icon": "file",
+          "icon": "file-o",
           "id": 78,
           "children": []
         },
         {
           "title": "Atka",
-          "icon": "file",
+          "icon": "file-o",
           "id": 79,
           "children": []
         },
         {
           "title": "Bahia",
-          "icon": "file",
+          "icon": "file-o",
           "id": 80,
           "children": []
         },
         {
           "title": "Bahia_Banderas",
-          "icon": "file",
+          "icon": "file-o",
           "id": 81,
           "children": []
         },
         {
           "title": "Barbados",
-          "icon": "file",
+          "icon": "file-o",
           "id": 82,
           "children": []
         },
         {
           "title": "Belem",
-          "icon": "file",
+          "icon": "file-o",
           "id": 83,
           "children": []
         },
         {
           "title": "Belize",
-          "icon": "file",
+          "icon": "file-o",
           "id": 84,
           "children": []
         },
         {
           "title": "Blanc-Sablon",
-          "icon": "file",
+          "icon": "file-o",
           "id": 85,
           "children": []
         },
         {
           "title": "Boa_Vista",
-          "icon": "file",
+          "icon": "file-o",
           "id": 86,
           "children": []
         },
         {
           "title": "Bogota",
-          "icon": "file",
+          "icon": "file-o",
           "id": 87,
           "children": []
         },
         {
           "title": "Boise",
-          "icon": "file",
+          "icon": "file-o",
           "id": 88,
           "children": []
         },
         {
           "title": "Buenos_Aires",
-          "icon": "file",
+          "icon": "file-o",
           "id": 89,
           "children": []
         },
         {
           "title": "Cambridge_Bay",
-          "icon": "file",
+          "icon": "file-o",
           "id": 90,
           "children": []
         },
         {
           "title": "Campo_Grande",
-          "icon": "file",
+          "icon": "file-o",
           "id": 91,
           "children": []
         },
         {
           "title": "Cancun",
-          "icon": "file",
+          "icon": "file-o",
           "id": 92,
           "children": []
         },
         {
           "title": "Caracas",
-          "icon": "file",
+          "icon": "file-o",
           "id": 93,
           "children": []
         },
         {
           "title": "Catamarca",
-          "icon": "file",
+          "icon": "file-o",
           "id": 94,
           "children": []
         },
         {
           "title": "Cayenne",
-          "icon": "file",
+          "icon": "file-o",
           "id": 95,
           "children": []
         },
         {
           "title": "Cayman",
-          "icon": "file",
+          "icon": "file-o",
           "id": 96,
           "children": []
         },
         {
           "title": "Chicago",
-          "icon": "file",
+          "icon": "file-o",
           "id": 97,
           "children": []
         },
         {
           "title": "Chihuahua",
-          "icon": "file",
+          "icon": "file-o",
           "id": 98,
           "children": []
         },
         {
           "title": "Coral_Harbour",
-          "icon": "file",
+          "icon": "file-o",
           "id": 99,
           "children": []
         },
         {
           "title": "Cordoba",
-          "icon": "file",
+          "icon": "file-o",
           "id": 100,
           "children": []
         },
         {
           "title": "Costa_Rica",
-          "icon": "file",
+          "icon": "file-o",
           "id": 101,
           "children": []
         },
         {
           "title": "Creston",
-          "icon": "file",
+          "icon": "file-o",
           "id": 102,
           "children": []
         },
         {
           "title": "Cuiaba",
-          "icon": "file",
+          "icon": "file-o",
           "id": 103,
           "children": []
         },
         {
           "title": "Curacao",
-          "icon": "file",
+          "icon": "file-o",
           "id": 104,
           "children": []
         },
         {
           "title": "Danmarkshavn",
-          "icon": "file",
+          "icon": "file-o",
           "id": 105,
           "children": []
         },
         {
           "title": "Dawson",
-          "icon": "file",
+          "icon": "file-o",
           "id": 106,
           "children": []
         },
         {
           "title": "Dawson_Creek",
-          "icon": "file",
+          "icon": "file-o",
           "id": 107,
           "children": []
         },
         {
           "title": "Denver",
-          "icon": "file",
+          "icon": "file-o",
           "id": 108,
           "children": []
         },
         {
           "title": "Detroit",
-          "icon": "file",
+          "icon": "file-o",
           "id": 109,
           "children": []
         },
         {
           "title": "Dominica",
-          "icon": "file",
+          "icon": "file-o",
           "id": 110,
           "children": []
         },
         {
           "title": "Edmonton",
-          "icon": "file",
+          "icon": "file-o",
           "id": 111,
           "children": []
         },
         {
           "title": "Eirunepe",
-          "icon": "file",
+          "icon": "file-o",
           "id": 112,
           "children": []
         },
         {
           "title": "El_Salvador",
-          "icon": "file",
+          "icon": "file-o",
           "id": 113,
           "children": []
         },
         {
           "title": "Ensenada",
-          "icon": "file",
+          "icon": "file-o",
           "id": 114,
           "children": []
         },
         {
           "title": "Fort_Nelson",
-          "icon": "file",
+          "icon": "file-o",
           "id": 115,
           "children": []
         },
         {
           "title": "Fort_Wayne",
-          "icon": "file",
+          "icon": "file-o",
           "id": 116,
           "children": []
         },
         {
           "title": "Fortaleza",
-          "icon": "file",
+          "icon": "file-o",
           "id": 117,
           "children": []
         },
         {
           "title": "Glace_Bay",
-          "icon": "file",
+          "icon": "file-o",
           "id": 118,
           "children": []
         },
         {
           "title": "Godthab",
-          "icon": "file",
+          "icon": "file-o",
           "id": 119,
           "children": []
         },
         {
           "title": "Goose_Bay",
-          "icon": "file",
+          "icon": "file-o",
           "id": 120,
           "children": []
         },
         {
           "title": "Grand_Turk",
-          "icon": "file",
+          "icon": "file-o",
           "id": 121,
           "children": []
         },
         {
           "title": "Grenada",
-          "icon": "file",
+          "icon": "file-o",
           "id": 122,
           "children": []
         },
         {
           "title": "Guadeloupe",
-          "icon": "file",
+          "icon": "file-o",
           "id": 123,
           "children": []
         },
         {
           "title": "Guatemala",
-          "icon": "file",
+          "icon": "file-o",
           "id": 124,
           "children": []
         },
         {
           "title": "Guayaquil",
-          "icon": "file",
+          "icon": "file-o",
           "id": 125,
           "children": []
         },
         {
           "title": "Guyana",
-          "icon": "file",
+          "icon": "file-o",
           "id": 126,
           "children": []
         },
         {
           "title": "Halifax",
-          "icon": "file",
+          "icon": "file-o",
           "id": 127,
           "children": []
         },
         {
           "title": "Havana",
-          "icon": "file",
+          "icon": "file-o",
           "id": 128,
           "children": []
         },
         {
           "title": "Hermosillo",
-          "icon": "file",
+          "icon": "file-o",
           "id": 129,
           "children": []
         },
@@ -782,49 +782,49 @@ window.tz = {
           "children": [
             {
               "title": "Indianapolis",
-              "icon": "file",
+              "icon": "file-o",
               "id": 131,
               "children": []
             },
             {
               "title": "Knox",
-              "icon": "file",
+              "icon": "file-o",
               "id": 132,
               "children": []
             },
             {
               "title": "Marengo",
-              "icon": "file",
+              "icon": "file-o",
               "id": 133,
               "children": []
             },
             {
               "title": "Petersburg",
-              "icon": "file",
+              "icon": "file-o",
               "id": 134,
               "children": []
             },
             {
               "title": "Tell_City",
-              "icon": "file",
+              "icon": "file-o",
               "id": 135,
               "children": []
             },
             {
               "title": "Vevay",
-              "icon": "file",
+              "icon": "file-o",
               "id": 136,
               "children": []
             },
             {
               "title": "Vincennes",
-              "icon": "file",
+              "icon": "file-o",
               "id": 137,
               "children": []
             },
             {
               "title": "Winamac",
-              "icon": "file",
+              "icon": "file-o",
               "id": 138,
               "children": []
             }
@@ -832,37 +832,37 @@ window.tz = {
         },
         {
           "title": "Indianapolis",
-          "icon": "file",
+          "icon": "file-o",
           "id": 139,
           "children": []
         },
         {
           "title": "Inuvik",
-          "icon": "file",
+          "icon": "file-o",
           "id": 140,
           "children": []
         },
         {
           "title": "Iqaluit",
-          "icon": "file",
+          "icon": "file-o",
           "id": 141,
           "children": []
         },
         {
           "title": "Jamaica",
-          "icon": "file",
+          "icon": "file-o",
           "id": 142,
           "children": []
         },
         {
           "title": "Jujuy",
-          "icon": "file",
+          "icon": "file-o",
           "id": 143,
           "children": []
         },
         {
           "title": "Juneau",
-          "icon": "file",
+          "icon": "file-o",
           "id": 144,
           "children": []
         },
@@ -873,13 +873,13 @@ window.tz = {
           "children": [
             {
               "title": "Louisville",
-              "icon": "file",
+              "icon": "file-o",
               "id": 146,
               "children": []
             },
             {
               "title": "Monticello",
-              "icon": "file",
+              "icon": "file-o",
               "id": 147,
               "children": []
             }
@@ -887,181 +887,181 @@ window.tz = {
         },
         {
           "title": "Knox_IN",
-          "icon": "file",
+          "icon": "file-o",
           "id": 148,
           "children": []
         },
         {
           "title": "Kralendijk",
-          "icon": "file",
+          "icon": "file-o",
           "id": 149,
           "children": []
         },
         {
           "title": "La_Paz",
-          "icon": "file",
+          "icon": "file-o",
           "id": 150,
           "children": []
         },
         {
           "title": "Lima",
-          "icon": "file",
+          "icon": "file-o",
           "id": 151,
           "children": []
         },
         {
           "title": "Los_Angeles",
-          "icon": "file",
+          "icon": "file-o",
           "id": 152,
           "children": []
         },
         {
           "title": "Louisville",
-          "icon": "file",
+          "icon": "file-o",
           "id": 153,
           "children": []
         },
         {
           "title": "Lower_Princes",
-          "icon": "file",
+          "icon": "file-o",
           "id": 154,
           "children": []
         },
         {
           "title": "Maceio",
-          "icon": "file",
+          "icon": "file-o",
           "id": 155,
           "children": []
         },
         {
           "title": "Managua",
-          "icon": "file",
+          "icon": "file-o",
           "id": 156,
           "children": []
         },
         {
           "title": "Manaus",
-          "icon": "file",
+          "icon": "file-o",
           "id": 157,
           "children": []
         },
         {
           "title": "Marigot",
-          "icon": "file",
+          "icon": "file-o",
           "id": 158,
           "children": []
         },
         {
           "title": "Martinique",
-          "icon": "file",
+          "icon": "file-o",
           "id": 159,
           "children": []
         },
         {
           "title": "Matamoros",
-          "icon": "file",
+          "icon": "file-o",
           "id": 160,
           "children": []
         },
         {
           "title": "Mazatlan",
-          "icon": "file",
+          "icon": "file-o",
           "id": 161,
           "children": []
         },
         {
           "title": "Mendoza",
-          "icon": "file",
+          "icon": "file-o",
           "id": 162,
           "children": []
         },
         {
           "title": "Menominee",
-          "icon": "file",
+          "icon": "file-o",
           "id": 163,
           "children": []
         },
         {
           "title": "Merida",
-          "icon": "file",
+          "icon": "file-o",
           "id": 164,
           "children": []
         },
         {
           "title": "Metlakatla",
-          "icon": "file",
+          "icon": "file-o",
           "id": 165,
           "children": []
         },
         {
           "title": "Mexico_City",
-          "icon": "file",
+          "icon": "file-o",
           "id": 166,
           "children": []
         },
         {
           "title": "Miquelon",
-          "icon": "file",
+          "icon": "file-o",
           "id": 167,
           "children": []
         },
         {
           "title": "Moncton",
-          "icon": "file",
+          "icon": "file-o",
           "id": 168,
           "children": []
         },
         {
           "title": "Monterrey",
-          "icon": "file",
+          "icon": "file-o",
           "id": 169,
           "children": []
         },
         {
           "title": "Montevideo",
-          "icon": "file",
+          "icon": "file-o",
           "id": 170,
           "children": []
         },
         {
           "title": "Montreal",
-          "icon": "file",
+          "icon": "file-o",
           "id": 171,
           "children": []
         },
         {
           "title": "Montserrat",
-          "icon": "file",
+          "icon": "file-o",
           "id": 172,
           "children": []
         },
         {
           "title": "Nassau",
-          "icon": "file",
+          "icon": "file-o",
           "id": 173,
           "children": []
         },
         {
           "title": "New_York",
-          "icon": "file",
+          "icon": "file-o",
           "id": 174,
           "children": []
         },
         {
           "title": "Nipigon",
-          "icon": "file",
+          "icon": "file-o",
           "id": 175,
           "children": []
         },
         {
           "title": "Nome",
-          "icon": "file",
+          "icon": "file-o",
           "id": 176,
           "children": []
         },
         {
           "title": "Noronha",
-          "icon": "file",
+          "icon": "file-o",
           "id": 177,
           "children": []
         },
@@ -1072,19 +1072,19 @@ window.tz = {
           "children": [
             {
               "title": "Beulah",
-              "icon": "file",
+              "icon": "file-o",
               "id": 179,
               "children": []
             },
             {
               "title": "Center",
-              "icon": "file",
+              "icon": "file-o",
               "id": 180,
               "children": []
             },
             {
               "title": "New_Salem",
-              "icon": "file",
+              "icon": "file-o",
               "id": 181,
               "children": []
             }
@@ -1092,265 +1092,265 @@ window.tz = {
         },
         {
           "title": "Ojinaga",
-          "icon": "file",
+          "icon": "file-o",
           "id": 182,
           "children": []
         },
         {
           "title": "Panama",
-          "icon": "file",
+          "icon": "file-o",
           "id": 183,
           "children": []
         },
         {
           "title": "Pangnirtung",
-          "icon": "file",
+          "icon": "file-o",
           "id": 184,
           "children": []
         },
         {
           "title": "Paramaribo",
-          "icon": "file",
+          "icon": "file-o",
           "id": 185,
           "children": []
         },
         {
           "title": "Phoenix",
-          "icon": "file",
+          "icon": "file-o",
           "id": 186,
           "children": []
         },
         {
           "title": "Port_of_Spain",
-          "icon": "file",
+          "icon": "file-o",
           "id": 187,
           "children": []
         },
         {
           "title": "Port-au-Prince",
-          "icon": "file",
+          "icon": "file-o",
           "id": 188,
           "children": []
         },
         {
           "title": "Porto_Acre",
-          "icon": "file",
+          "icon": "file-o",
           "id": 189,
           "children": []
         },
         {
           "title": "Porto_Velho",
-          "icon": "file",
+          "icon": "file-o",
           "id": 190,
           "children": []
         },
         {
           "title": "Puerto_Rico",
-          "icon": "file",
+          "icon": "file-o",
           "id": 191,
           "children": []
         },
         {
           "title": "Rainy_River",
-          "icon": "file",
+          "icon": "file-o",
           "id": 192,
           "children": []
         },
         {
           "title": "Rankin_Inlet",
-          "icon": "file",
+          "icon": "file-o",
           "id": 193,
           "children": []
         },
         {
           "title": "Recife",
-          "icon": "file",
+          "icon": "file-o",
           "id": 194,
           "children": []
         },
         {
           "title": "Regina",
-          "icon": "file",
+          "icon": "file-o",
           "id": 195,
           "children": []
         },
         {
           "title": "Resolute",
-          "icon": "file",
+          "icon": "file-o",
           "id": 196,
           "children": []
         },
         {
           "title": "Rio_Branco",
-          "icon": "file",
+          "icon": "file-o",
           "id": 197,
           "children": []
         },
         {
           "title": "Rosario",
-          "icon": "file",
+          "icon": "file-o",
           "id": 198,
           "children": []
         },
         {
           "title": "Santa_Isabel",
-          "icon": "file",
+          "icon": "file-o",
           "id": 199,
           "children": []
         },
         {
           "title": "Santarem",
-          "icon": "file",
+          "icon": "file-o",
           "id": 200,
           "children": []
         },
         {
           "title": "Santiago",
-          "icon": "file",
+          "icon": "file-o",
           "id": 201,
           "children": []
         },
         {
           "title": "Santo_Domingo",
-          "icon": "file",
+          "icon": "file-o",
           "id": 202,
           "children": []
         },
         {
           "title": "Sao_Paulo",
-          "icon": "file",
+          "icon": "file-o",
           "id": 203,
           "children": []
         },
         {
           "title": "Scoresbysund",
-          "icon": "file",
+          "icon": "file-o",
           "id": 204,
           "children": []
         },
         {
           "title": "Shiprock",
-          "icon": "file",
+          "icon": "file-o",
           "id": 205,
           "children": []
         },
         {
           "title": "Sitka",
-          "icon": "file",
+          "icon": "file-o",
           "id": 206,
           "children": []
         },
         {
           "title": "St_Barthelemy",
-          "icon": "file",
+          "icon": "file-o",
           "id": 207,
           "children": []
         },
         {
           "title": "St_Johns",
-          "icon": "file",
+          "icon": "file-o",
           "id": 208,
           "children": []
         },
         {
           "title": "St_Kitts",
-          "icon": "file",
+          "icon": "file-o",
           "id": 209,
           "children": []
         },
         {
           "title": "St_Lucia",
-          "icon": "file",
+          "icon": "file-o",
           "id": 210,
           "children": []
         },
         {
           "title": "St_Thomas",
-          "icon": "file",
+          "icon": "file-o",
           "id": 211,
           "children": []
         },
         {
           "title": "St_Vincent",
-          "icon": "file",
+          "icon": "file-o",
           "id": 212,
           "children": []
         },
         {
           "title": "Swift_Current",
-          "icon": "file",
+          "icon": "file-o",
           "id": 213,
           "children": []
         },
         {
           "title": "Tegucigalpa",
-          "icon": "file",
+          "icon": "file-o",
           "id": 214,
           "children": []
         },
         {
           "title": "Thule",
-          "icon": "file",
+          "icon": "file-o",
           "id": 215,
           "children": []
         },
         {
           "title": "Thunder_Bay",
-          "icon": "file",
+          "icon": "file-o",
           "id": 216,
           "children": []
         },
         {
           "title": "Tijuana",
-          "icon": "file",
+          "icon": "file-o",
           "id": 217,
           "children": []
         },
         {
           "title": "Toronto",
-          "icon": "file",
+          "icon": "file-o",
           "id": 218,
           "children": []
         },
         {
           "title": "Tortola",
-          "icon": "file",
+          "icon": "file-o",
           "id": 219,
           "children": []
         },
         {
           "title": "Vancouver",
-          "icon": "file",
+          "icon": "file-o",
           "id": 220,
           "children": []
         },
         {
           "title": "Virgin",
-          "icon": "file",
+          "icon": "file-o",
           "id": 221,
           "children": []
         },
         {
           "title": "Whitehorse",
-          "icon": "file",
+          "icon": "file-o",
           "id": 222,
           "children": []
         },
         {
           "title": "Winnipeg",
-          "icon": "file",
+          "icon": "file-o",
           "id": 223,
           "children": []
         },
         {
           "title": "Yakutat",
-          "icon": "file",
+          "icon": "file-o",
           "id": 224,
           "children": []
         },
         {
           "title": "Yellowknife",
-          "icon": "file",
+          "icon": "file-o",
           "id": 225,
           "children": []
         }
@@ -1363,73 +1363,73 @@ window.tz = {
       "children": [
         {
           "title": "Casey",
-          "icon": "file",
+          "icon": "file-o",
           "id": 227,
           "children": []
         },
         {
           "title": "Davis",
-          "icon": "file",
+          "icon": "file-o",
           "id": 228,
           "children": []
         },
         {
           "title": "DumontDUrville",
-          "icon": "file",
+          "icon": "file-o",
           "id": 229,
           "children": []
         },
         {
           "title": "Macquarie",
-          "icon": "file",
+          "icon": "file-o",
           "id": 230,
           "children": []
         },
         {
           "title": "Mawson",
-          "icon": "file",
+          "icon": "file-o",
           "id": 231,
           "children": []
         },
         {
           "title": "McMurdo",
-          "icon": "file",
+          "icon": "file-o",
           "id": 232,
           "children": []
         },
         {
           "title": "Palmer",
-          "icon": "file",
+          "icon": "file-o",
           "id": 233,
           "children": []
         },
         {
           "title": "Rothera",
-          "icon": "file",
+          "icon": "file-o",
           "id": 234,
           "children": []
         },
         {
           "title": "South_Pole",
-          "icon": "file",
+          "icon": "file-o",
           "id": 235,
           "children": []
         },
         {
           "title": "Syowa",
-          "icon": "file",
+          "icon": "file-o",
           "id": 236,
           "children": []
         },
         {
           "title": "Troll",
-          "icon": "file",
+          "icon": "file-o",
           "id": 237,
           "children": []
         },
         {
           "title": "Vostok",
-          "icon": "file",
+          "icon": "file-o",
           "id": 238,
           "children": []
         }
@@ -1442,7 +1442,7 @@ window.tz = {
       "children": [
         {
           "title": "Longyearbyen",
-          "icon": "file",
+          "icon": "file-o",
           "id": 240,
           "children": []
         }
@@ -1455,571 +1455,571 @@ window.tz = {
       "children": [
         {
           "title": "Aden",
-          "icon": "file",
+          "icon": "file-o",
           "id": 242,
           "children": []
         },
         {
           "title": "Almaty",
-          "icon": "file",
+          "icon": "file-o",
           "id": 243,
           "children": []
         },
         {
           "title": "Amman",
-          "icon": "file",
+          "icon": "file-o",
           "id": 244,
           "children": []
         },
         {
           "title": "Anadyr",
-          "icon": "file",
+          "icon": "file-o",
           "id": 245,
           "children": []
         },
         {
           "title": "Aqtau",
-          "icon": "file",
+          "icon": "file-o",
           "id": 246,
           "children": []
         },
         {
           "title": "Aqtobe",
-          "icon": "file",
+          "icon": "file-o",
           "id": 247,
           "children": []
         },
         {
           "title": "Ashgabat",
-          "icon": "file",
+          "icon": "file-o",
           "id": 248,
           "children": []
         },
         {
           "title": "Ashkhabad",
-          "icon": "file",
+          "icon": "file-o",
           "id": 249,
           "children": []
         },
         {
           "title": "Baghdad",
-          "icon": "file",
+          "icon": "file-o",
           "id": 250,
           "children": []
         },
         {
           "title": "Bahrain",
-          "icon": "file",
+          "icon": "file-o",
           "id": 251,
           "children": []
         },
         {
           "title": "Baku",
-          "icon": "file",
+          "icon": "file-o",
           "id": 252,
           "children": []
         },
         {
           "title": "Bangkok",
-          "icon": "file",
+          "icon": "file-o",
           "id": 253,
           "children": []
         },
         {
           "title": "Barnaul",
-          "icon": "file",
+          "icon": "file-o",
           "id": 254,
           "children": []
         },
         {
           "title": "Beirut",
-          "icon": "file",
+          "icon": "file-o",
           "id": 255,
           "children": []
         },
         {
           "title": "Bishkek",
-          "icon": "file",
+          "icon": "file-o",
           "id": 256,
           "children": []
         },
         {
           "title": "Brunei",
-          "icon": "file",
+          "icon": "file-o",
           "id": 257,
           "children": []
         },
         {
           "title": "Calcutta",
-          "icon": "file",
+          "icon": "file-o",
           "id": 258,
           "children": []
         },
         {
           "title": "Chita",
-          "icon": "file",
+          "icon": "file-o",
           "id": 259,
           "children": []
         },
         {
           "title": "Choibalsan",
-          "icon": "file",
+          "icon": "file-o",
           "id": 260,
           "children": []
         },
         {
           "title": "Chongqing",
-          "icon": "file",
+          "icon": "file-o",
           "id": 261,
           "children": []
         },
         {
           "title": "Chungking",
-          "icon": "file",
+          "icon": "file-o",
           "id": 262,
           "children": []
         },
         {
           "title": "Colombo",
-          "icon": "file",
+          "icon": "file-o",
           "id": 263,
           "children": []
         },
         {
           "title": "Dacca",
-          "icon": "file",
+          "icon": "file-o",
           "id": 264,
           "children": []
         },
         {
           "title": "Damascus",
-          "icon": "file",
+          "icon": "file-o",
           "id": 265,
           "children": []
         },
         {
           "title": "Dhaka",
-          "icon": "file",
+          "icon": "file-o",
           "id": 266,
           "children": []
         },
         {
           "title": "Dili",
-          "icon": "file",
+          "icon": "file-o",
           "id": 267,
           "children": []
         },
         {
           "title": "Dubai",
-          "icon": "file",
+          "icon": "file-o",
           "id": 268,
           "children": []
         },
         {
           "title": "Dushanbe",
-          "icon": "file",
+          "icon": "file-o",
           "id": 269,
           "children": []
         },
         {
           "title": "Gaza",
-          "icon": "file",
+          "icon": "file-o",
           "id": 270,
           "children": []
         },
         {
           "title": "Harbin",
-          "icon": "file",
+          "icon": "file-o",
           "id": 271,
           "children": []
         },
         {
           "title": "Hebron",
-          "icon": "file",
+          "icon": "file-o",
           "id": 272,
           "children": []
         },
         {
           "title": "Ho_Chi_Minh",
-          "icon": "file",
+          "icon": "file-o",
           "id": 273,
           "children": []
         },
         {
           "title": "Hong_Kong",
-          "icon": "file",
+          "icon": "file-o",
           "id": 274,
           "children": []
         },
         {
           "title": "Hovd",
-          "icon": "file",
+          "icon": "file-o",
           "id": 275,
           "children": []
         },
         {
           "title": "Irkutsk",
-          "icon": "file",
+          "icon": "file-o",
           "id": 276,
           "children": []
         },
         {
           "title": "Istanbul",
-          "icon": "file",
+          "icon": "file-o",
           "id": 277,
           "children": []
         },
         {
           "title": "Jakarta",
-          "icon": "file",
+          "icon": "file-o",
           "id": 278,
           "children": []
         },
         {
           "title": "Jayapura",
-          "icon": "file",
+          "icon": "file-o",
           "id": 279,
           "children": []
         },
         {
           "title": "Jerusalem",
-          "icon": "file",
+          "icon": "file-o",
           "id": 280,
           "children": []
         },
         {
           "title": "Kabul",
-          "icon": "file",
+          "icon": "file-o",
           "id": 281,
           "children": []
         },
         {
           "title": "Kamchatka",
-          "icon": "file",
+          "icon": "file-o",
           "id": 282,
           "children": []
         },
         {
           "title": "Karachi",
-          "icon": "file",
+          "icon": "file-o",
           "id": 283,
           "children": []
         },
         {
           "title": "Kashgar",
-          "icon": "file",
+          "icon": "file-o",
           "id": 284,
           "children": []
         },
         {
           "title": "Kathmandu",
-          "icon": "file",
+          "icon": "file-o",
           "id": 285,
           "children": []
         },
         {
           "title": "Katmandu",
-          "icon": "file",
+          "icon": "file-o",
           "id": 286,
           "children": []
         },
         {
           "title": "Khandyga",
-          "icon": "file",
+          "icon": "file-o",
           "id": 287,
           "children": []
         },
         {
           "title": "Kolkata",
-          "icon": "file",
+          "icon": "file-o",
           "id": 288,
           "children": []
         },
         {
           "title": "Krasnoyarsk",
-          "icon": "file",
+          "icon": "file-o",
           "id": 289,
           "children": []
         },
         {
           "title": "Kuala_Lumpur",
-          "icon": "file",
+          "icon": "file-o",
           "id": 290,
           "children": []
         },
         {
           "title": "Kuching",
-          "icon": "file",
+          "icon": "file-o",
           "id": 291,
           "children": []
         },
         {
           "title": "Kuwait",
-          "icon": "file",
+          "icon": "file-o",
           "id": 292,
           "children": []
         },
         {
           "title": "Macao",
-          "icon": "file",
+          "icon": "file-o",
           "id": 293,
           "children": []
         },
         {
           "title": "Macau",
-          "icon": "file",
+          "icon": "file-o",
           "id": 294,
           "children": []
         },
         {
           "title": "Magadan",
-          "icon": "file",
+          "icon": "file-o",
           "id": 295,
           "children": []
         },
         {
           "title": "Makassar",
-          "icon": "file",
+          "icon": "file-o",
           "id": 296,
           "children": []
         },
         {
           "title": "Manila",
-          "icon": "file",
+          "icon": "file-o",
           "id": 297,
           "children": []
         },
         {
           "title": "Muscat",
-          "icon": "file",
+          "icon": "file-o",
           "id": 298,
           "children": []
         },
         {
           "title": "Nicosia",
-          "icon": "file",
+          "icon": "file-o",
           "id": 299,
           "children": []
         },
         {
           "title": "Novokuznetsk",
-          "icon": "file",
+          "icon": "file-o",
           "id": 300,
           "children": []
         },
         {
           "title": "Novosibirsk",
-          "icon": "file",
+          "icon": "file-o",
           "id": 301,
           "children": []
         },
         {
           "title": "Omsk",
-          "icon": "file",
+          "icon": "file-o",
           "id": 302,
           "children": []
         },
         {
           "title": "Oral",
-          "icon": "file",
+          "icon": "file-o",
           "id": 303,
           "children": []
         },
         {
           "title": "Phnom_Penh",
-          "icon": "file",
+          "icon": "file-o",
           "id": 304,
           "children": []
         },
         {
           "title": "Pontianak",
-          "icon": "file",
+          "icon": "file-o",
           "id": 305,
           "children": []
         },
         {
           "title": "Pyongyang",
-          "icon": "file",
+          "icon": "file-o",
           "id": 306,
           "children": []
         },
         {
           "title": "Qatar",
-          "icon": "file",
+          "icon": "file-o",
           "id": 307,
           "children": []
         },
         {
           "title": "Qyzylorda",
-          "icon": "file",
+          "icon": "file-o",
           "id": 308,
           "children": []
         },
         {
           "title": "Rangoon",
-          "icon": "file",
+          "icon": "file-o",
           "id": 309,
           "children": []
         },
         {
           "title": "Riyadh",
-          "icon": "file",
+          "icon": "file-o",
           "id": 310,
           "children": []
         },
         {
           "title": "Saigon",
-          "icon": "file",
+          "icon": "file-o",
           "id": 311,
           "children": []
         },
         {
           "title": "Sakhalin",
-          "icon": "file",
+          "icon": "file-o",
           "id": 312,
           "children": []
         },
         {
           "title": "Samarkand",
-          "icon": "file",
+          "icon": "file-o",
           "id": 313,
           "children": []
         },
         {
           "title": "Seoul",
-          "icon": "file",
+          "icon": "file-o",
           "id": 314,
           "children": []
         },
         {
           "title": "Shanghai",
-          "icon": "file",
+          "icon": "file-o",
           "id": 315,
           "children": []
         },
         {
           "title": "Singapore",
-          "icon": "file",
+          "icon": "file-o",
           "id": 316,
           "children": []
         },
         {
           "title": "Srednekolymsk",
-          "icon": "file",
+          "icon": "file-o",
           "id": 317,
           "children": []
         },
         {
           "title": "Taipei",
-          "icon": "file",
+          "icon": "file-o",
           "id": 318,
           "children": []
         },
         {
           "title": "Tashkent",
-          "icon": "file",
+          "icon": "file-o",
           "id": 319,
           "children": []
         },
         {
           "title": "Tbilisi",
-          "icon": "file",
+          "icon": "file-o",
           "id": 320,
           "children": []
         },
         {
           "title": "Tehran",
-          "icon": "file",
+          "icon": "file-o",
           "id": 321,
           "children": []
         },
         {
           "title": "Tel_Aviv",
-          "icon": "file",
+          "icon": "file-o",
           "id": 322,
           "children": []
         },
         {
           "title": "Thimbu",
-          "icon": "file",
+          "icon": "file-o",
           "id": 323,
           "children": []
         },
         {
           "title": "Thimphu",
-          "icon": "file",
+          "icon": "file-o",
           "id": 324,
           "children": []
         },
         {
           "title": "Tokyo",
-          "icon": "file",
+          "icon": "file-o",
           "id": 325,
           "children": []
         },
         {
           "title": "Tomsk",
-          "icon": "file",
+          "icon": "file-o",
           "id": 326,
           "children": []
         },
         {
           "title": "Ujung_Pandang",
-          "icon": "file",
+          "icon": "file-o",
           "id": 327,
           "children": []
         },
         {
           "title": "Ulaanbaatar",
-          "icon": "file",
+          "icon": "file-o",
           "id": 328,
           "children": []
         },
         {
           "title": "Ulan_Bator",
-          "icon": "file",
+          "icon": "file-o",
           "id": 329,
           "children": []
         },
         {
           "title": "Urumqi",
-          "icon": "file",
+          "icon": "file-o",
           "id": 330,
           "children": []
         },
         {
           "title": "Ust-Nera",
-          "icon": "file",
+          "icon": "file-o",
           "id": 331,
           "children": []
         },
         {
           "title": "Vientiane",
-          "icon": "file",
+          "icon": "file-o",
           "id": 332,
           "children": []
         },
         {
           "title": "Vladivostok",
-          "icon": "file",
+          "icon": "file-o",
           "id": 333,
           "children": []
         },
         {
           "title": "Yakutsk",
-          "icon": "file",
+          "icon": "file-o",
           "id": 334,
           "children": []
         },
         {
           "title": "Yekaterinburg",
-          "icon": "file",
+          "icon": "file-o",
           "id": 335,
           "children": []
         },
         {
           "title": "Yerevan",
-          "icon": "file",
+          "icon": "file-o",
           "id": 336,
           "children": []
         }
@@ -2032,73 +2032,73 @@ window.tz = {
       "children": [
         {
           "title": "Azores",
-          "icon": "file",
+          "icon": "file-o",
           "id": 338,
           "children": []
         },
         {
           "title": "Bermuda",
-          "icon": "file",
+          "icon": "file-o",
           "id": 339,
           "children": []
         },
         {
           "title": "Canary",
-          "icon": "file",
+          "icon": "file-o",
           "id": 340,
           "children": []
         },
         {
           "title": "Cape_Verde",
-          "icon": "file",
+          "icon": "file-o",
           "id": 341,
           "children": []
         },
         {
           "title": "Faeroe",
-          "icon": "file",
+          "icon": "file-o",
           "id": 342,
           "children": []
         },
         {
           "title": "Faroe",
-          "icon": "file",
+          "icon": "file-o",
           "id": 343,
           "children": []
         },
         {
           "title": "Jan_Mayen",
-          "icon": "file",
+          "icon": "file-o",
           "id": 344,
           "children": []
         },
         {
           "title": "Madeira",
-          "icon": "file",
+          "icon": "file-o",
           "id": 345,
           "children": []
         },
         {
           "title": "Reykjavik",
-          "icon": "file",
+          "icon": "file-o",
           "id": 346,
           "children": []
         },
         {
           "title": "South_Georgia",
-          "icon": "file",
+          "icon": "file-o",
           "id": 347,
           "children": []
         },
         {
           "title": "St_Helena",
-          "icon": "file",
+          "icon": "file-o",
           "id": 348,
           "children": []
         },
         {
           "title": "Stanley",
-          "icon": "file",
+          "icon": "file-o",
           "id": 349,
           "children": []
         }
@@ -2111,139 +2111,139 @@ window.tz = {
       "children": [
         {
           "title": "ACT",
-          "icon": "file",
+          "icon": "file-o",
           "id": 351,
           "children": []
         },
         {
           "title": "Adelaide",
-          "icon": "file",
+          "icon": "file-o",
           "id": 352,
           "children": []
         },
         {
           "title": "Brisbane",
-          "icon": "file",
+          "icon": "file-o",
           "id": 353,
           "children": []
         },
         {
           "title": "Broken_Hill",
-          "icon": "file",
+          "icon": "file-o",
           "id": 354,
           "children": []
         },
         {
           "title": "Canberra",
-          "icon": "file",
+          "icon": "file-o",
           "id": 355,
           "children": []
         },
         {
           "title": "Currie",
-          "icon": "file",
+          "icon": "file-o",
           "id": 356,
           "children": []
         },
         {
           "title": "Darwin",
-          "icon": "file",
+          "icon": "file-o",
           "id": 357,
           "children": []
         },
         {
           "title": "Eucla",
-          "icon": "file",
+          "icon": "file-o",
           "id": 358,
           "children": []
         },
         {
           "title": "Hobart",
-          "icon": "file",
+          "icon": "file-o",
           "id": 359,
           "children": []
         },
         {
           "title": "LHI",
-          "icon": "file",
+          "icon": "file-o",
           "id": 360,
           "children": []
         },
         {
           "title": "Lindeman",
-          "icon": "file",
+          "icon": "file-o",
           "id": 361,
           "children": []
         },
         {
           "title": "Lord_Howe",
-          "icon": "file",
+          "icon": "file-o",
           "id": 362,
           "children": []
         },
         {
           "title": "Melbourne",
-          "icon": "file",
+          "icon": "file-o",
           "id": 363,
           "children": []
         },
         {
           "title": "North",
-          "icon": "file",
+          "icon": "file-o",
           "id": 364,
           "children": []
         },
         {
           "title": "NSW",
-          "icon": "file",
+          "icon": "file-o",
           "id": 365,
           "children": []
         },
         {
           "title": "Perth",
-          "icon": "file",
+          "icon": "file-o",
           "id": 366,
           "children": []
         },
         {
           "title": "Queensland",
-          "icon": "file",
+          "icon": "file-o",
           "id": 367,
           "children": []
         },
         {
           "title": "South",
-          "icon": "file",
+          "icon": "file-o",
           "id": 368,
           "children": []
         },
         {
           "title": "Sydney",
-          "icon": "file",
+          "icon": "file-o",
           "id": 369,
           "children": []
         },
         {
           "title": "Tasmania",
-          "icon": "file",
+          "icon": "file-o",
           "id": 370,
           "children": []
         },
         {
           "title": "Victoria",
-          "icon": "file",
+          "icon": "file-o",
           "id": 371,
           "children": []
         },
         {
           "title": "West",
-          "icon": "file",
+          "icon": "file-o",
           "id": 372,
           "children": []
         },
         {
           "title": "Yancowinna",
-          "icon": "file",
+          "icon": "file-o",
           "id": 373,
           "children": []
         }
@@ -2256,25 +2256,25 @@ window.tz = {
       "children": [
         {
           "title": "Acre",
-          "icon": "file",
+          "icon": "file-o",
           "id": 375,
           "children": []
         },
         {
           "title": "DeNoronha",
-          "icon": "file",
+          "icon": "file-o",
           "id": 376,
           "children": []
         },
         {
           "title": "East",
-          "icon": "file",
+          "icon": "file-o",
           "id": 377,
           "children": []
         },
         {
           "title": "West",
-          "icon": "file",
+          "icon": "file-o",
           "id": 378,
           "children": []
         }
@@ -2287,55 +2287,55 @@ window.tz = {
       "children": [
         {
           "title": "Atlantic",
-          "icon": "file",
+          "icon": "file-o",
           "id": 380,
           "children": []
         },
         {
           "title": "Central",
-          "icon": "file",
+          "icon": "file-o",
           "id": 381,
           "children": []
         },
         {
           "title": "East-Saskatchewan",
-          "icon": "file",
+          "icon": "file-o",
           "id": 382,
           "children": []
         },
         {
           "title": "Eastern",
-          "icon": "file",
+          "icon": "file-o",
           "id": 383,
           "children": []
         },
         {
           "title": "Mountain",
-          "icon": "file",
+          "icon": "file-o",
           "id": 384,
           "children": []
         },
         {
           "title": "Newfoundland",
-          "icon": "file",
+          "icon": "file-o",
           "id": 385,
           "children": []
         },
         {
           "title": "Pacific",
-          "icon": "file",
+          "icon": "file-o",
           "id": 386,
           "children": []
         },
         {
           "title": "Saskatchewan",
-          "icon": "file",
+          "icon": "file-o",
           "id": 387,
           "children": []
         },
         {
           "title": "Yukon",
-          "icon": "file",
+          "icon": "file-o",
           "id": 388,
           "children": []
         }
@@ -2343,7 +2343,7 @@ window.tz = {
     },
     {
       "title": "CET",
-      "icon": "file",
+      "icon": "file-o",
       "id": 389,
       "children": []
     },
@@ -2354,13 +2354,13 @@ window.tz = {
       "children": [
         {
           "title": "Continental",
-          "icon": "file",
+          "icon": "file-o",
           "id": 391,
           "children": []
         },
         {
           "title": "EasterIsland",
-          "icon": "file",
+          "icon": "file-o",
           "id": 392,
           "children": []
         }
@@ -2368,43 +2368,43 @@ window.tz = {
     },
     {
       "title": "CST6CDT",
-      "icon": "file",
+      "icon": "file-o",
       "id": 393,
       "children": []
     },
     {
       "title": "Cuba",
-      "icon": "file",
+      "icon": "file-o",
       "id": 394,
       "children": []
     },
     {
       "title": "EET",
-      "icon": "file",
+      "icon": "file-o",
       "id": 395,
       "children": []
     },
     {
       "title": "Egypt",
-      "icon": "file",
+      "icon": "file-o",
       "id": 396,
       "children": []
     },
     {
       "title": "Eire",
-      "icon": "file",
+      "icon": "file-o",
       "id": 397,
       "children": []
     },
     {
       "title": "EST",
-      "icon": "file",
+      "icon": "file-o",
       "id": 398,
       "children": []
     },
     {
       "title": "EST5EDT",
-      "icon": "file",
+      "icon": "file-o",
       "id": 399,
       "children": []
     },
@@ -2415,211 +2415,211 @@ window.tz = {
       "children": [
         {
           "title": "GMT",
-          "icon": "file",
+          "icon": "file-o",
           "id": 401,
           "children": []
         },
         {
           "title": "GMT-0",
-          "icon": "file",
+          "icon": "file-o",
           "id": 402,
           "children": []
         },
         {
           "title": "GMT-1",
-          "icon": "file",
+          "icon": "file-o",
           "id": 403,
           "children": []
         },
         {
           "title": "GMT-10",
-          "icon": "file",
+          "icon": "file-o",
           "id": 404,
           "children": []
         },
         {
           "title": "GMT-11",
-          "icon": "file",
+          "icon": "file-o",
           "id": 405,
           "children": []
         },
         {
           "title": "GMT-12",
-          "icon": "file",
+          "icon": "file-o",
           "id": 406,
           "children": []
         },
         {
           "title": "GMT-13",
-          "icon": "file",
+          "icon": "file-o",
           "id": 407,
           "children": []
         },
         {
           "title": "GMT-14",
-          "icon": "file",
+          "icon": "file-o",
           "id": 408,
           "children": []
         },
         {
           "title": "GMT-2",
-          "icon": "file",
+          "icon": "file-o",
           "id": 409,
           "children": []
         },
         {
           "title": "GMT-3",
-          "icon": "file",
+          "icon": "file-o",
           "id": 410,
           "children": []
         },
         {
           "title": "GMT-4",
-          "icon": "file",
+          "icon": "file-o",
           "id": 411,
           "children": []
         },
         {
           "title": "GMT-5",
-          "icon": "file",
+          "icon": "file-o",
           "id": 412,
           "children": []
         },
         {
           "title": "GMT-6",
-          "icon": "file",
+          "icon": "file-o",
           "id": 413,
           "children": []
         },
         {
           "title": "GMT-7",
-          "icon": "file",
+          "icon": "file-o",
           "id": 414,
           "children": []
         },
         {
           "title": "GMT-8",
-          "icon": "file",
+          "icon": "file-o",
           "id": 415,
           "children": []
         },
         {
           "title": "GMT-9",
-          "icon": "file",
+          "icon": "file-o",
           "id": 416,
           "children": []
         },
         {
           "title": "GMT+0",
-          "icon": "file",
+          "icon": "file-o",
           "id": 417,
           "children": []
         },
         {
           "title": "GMT+1",
-          "icon": "file",
+          "icon": "file-o",
           "id": 418,
           "children": []
         },
         {
           "title": "GMT+10",
-          "icon": "file",
+          "icon": "file-o",
           "id": 419,
           "children": []
         },
         {
           "title": "GMT+11",
-          "icon": "file",
+          "icon": "file-o",
           "id": 420,
           "children": []
         },
         {
           "title": "GMT+12",
-          "icon": "file",
+          "icon": "file-o",
           "id": 421,
           "children": []
         },
         {
           "title": "GMT+2",
-          "icon": "file",
+          "icon": "file-o",
           "id": 422,
           "children": []
         },
         {
           "title": "GMT+3",
-          "icon": "file",
+          "icon": "file-o",
           "id": 423,
           "children": []
         },
         {
           "title": "GMT+4",
-          "icon": "file",
+          "icon": "file-o",
           "id": 424,
           "children": []
         },
         {
           "title": "GMT+5",
-          "icon": "file",
+          "icon": "file-o",
           "id": 425,
           "children": []
         },
         {
           "title": "GMT+6",
-          "icon": "file",
+          "icon": "file-o",
           "id": 426,
           "children": []
         },
         {
           "title": "GMT+7",
-          "icon": "file",
+          "icon": "file-o",
           "id": 427,
           "children": []
         },
         {
           "title": "GMT+8",
-          "icon": "file",
+          "icon": "file-o",
           "id": 428,
           "children": []
         },
         {
           "title": "GMT+9",
-          "icon": "file",
+          "icon": "file-o",
           "id": 429,
           "children": []
         },
         {
           "title": "GMT0",
-          "icon": "file",
+          "icon": "file-o",
           "id": 430,
           "children": []
         },
         {
           "title": "Greenwich",
-          "icon": "file",
+          "icon": "file-o",
           "id": 431,
           "children": []
         },
         {
           "title": "UCT",
-          "icon": "file",
+          "icon": "file-o",
           "id": 432,
           "children": []
         },
         {
           "title": "Universal",
-          "icon": "file",
+          "icon": "file-o",
           "id": 433,
           "children": []
         },
         {
           "title": "UTC",
-          "icon": "file",
+          "icon": "file-o",
           "id": 434,
           "children": []
         },
         {
           "title": "Zulu",
-          "icon": "file",
+          "icon": "file-o",
           "id": 435,
           "children": []
         }
@@ -2632,373 +2632,373 @@ window.tz = {
       "children": [
         {
           "title": "Amsterdam",
-          "icon": "file",
+          "icon": "file-o",
           "id": 437,
           "children": []
         },
         {
           "title": "Andorra",
-          "icon": "file",
+          "icon": "file-o",
           "id": 438,
           "children": []
         },
         {
           "title": "Astrakhan",
-          "icon": "file",
+          "icon": "file-o",
           "id": 439,
           "children": []
         },
         {
           "title": "Athens",
-          "icon": "file",
+          "icon": "file-o",
           "id": 440,
           "children": []
         },
         {
           "title": "Belfast",
-          "icon": "file",
+          "icon": "file-o",
           "id": 441,
           "children": []
         },
         {
           "title": "Belgrade",
-          "icon": "file",
+          "icon": "file-o",
           "id": 442,
           "children": []
         },
         {
           "title": "Berlin",
-          "icon": "file",
+          "icon": "file-o",
           "id": 443,
           "children": []
         },
         {
           "title": "Bratislava",
-          "icon": "file",
+          "icon": "file-o",
           "id": 444,
           "children": []
         },
         {
           "title": "Brussels",
-          "icon": "file",
+          "icon": "file-o",
           "id": 445,
           "children": []
         },
         {
           "title": "Bucharest",
-          "icon": "file",
+          "icon": "file-o",
           "id": 446,
           "children": []
         },
         {
           "title": "Budapest",
-          "icon": "file",
+          "icon": "file-o",
           "id": 447,
           "children": []
         },
         {
           "title": "Busingen",
-          "icon": "file",
+          "icon": "file-o",
           "id": 448,
           "children": []
         },
         {
           "title": "Chisinau",
-          "icon": "file",
+          "icon": "file-o",
           "id": 449,
           "children": []
         },
         {
           "title": "Copenhagen",
-          "icon": "file",
+          "icon": "file-o",
           "id": 450,
           "children": []
         },
         {
           "title": "Dublin",
-          "icon": "file",
+          "icon": "file-o",
           "id": 451,
           "children": []
         },
         {
           "title": "Gibraltar",
-          "icon": "file",
+          "icon": "file-o",
           "id": 452,
           "children": []
         },
         {
           "title": "Guernsey",
-          "icon": "file",
+          "icon": "file-o",
           "id": 453,
           "children": []
         },
         {
           "title": "Helsinki",
-          "icon": "file",
+          "icon": "file-o",
           "id": 454,
           "children": []
         },
         {
           "title": "Isle_of_Man",
-          "icon": "file",
+          "icon": "file-o",
           "id": 455,
           "children": []
         },
         {
           "title": "Istanbul",
-          "icon": "file",
+          "icon": "file-o",
           "id": 456,
           "children": []
         },
         {
           "title": "Jersey",
-          "icon": "file",
+          "icon": "file-o",
           "id": 457,
           "children": []
         },
         {
           "title": "Kaliningrad",
-          "icon": "file",
+          "icon": "file-o",
           "id": 458,
           "children": []
         },
         {
           "title": "Kiev",
-          "icon": "file",
+          "icon": "file-o",
           "id": 459,
           "children": []
         },
         {
           "title": "Kirov",
-          "icon": "file",
+          "icon": "file-o",
           "id": 460,
           "children": []
         },
         {
           "title": "Lisbon",
-          "icon": "file",
+          "icon": "file-o",
           "id": 461,
           "children": []
         },
         {
           "title": "Ljubljana",
-          "icon": "file",
+          "icon": "file-o",
           "id": 462,
           "children": []
         },
         {
           "title": "London",
-          "icon": "file",
+          "icon": "file-o",
           "id": 463,
           "children": []
         },
         {
           "title": "Luxembourg",
-          "icon": "file",
+          "icon": "file-o",
           "id": 464,
           "children": []
         },
         {
           "title": "Madrid",
-          "icon": "file",
+          "icon": "file-o",
           "id": 465,
           "children": []
         },
         {
           "title": "Malta",
-          "icon": "file",
+          "icon": "file-o",
           "id": 466,
           "children": []
         },
         {
           "title": "Mariehamn",
-          "icon": "file",
+          "icon": "file-o",
           "id": 467,
           "children": []
         },
         {
           "title": "Minsk",
-          "icon": "file",
+          "icon": "file-o",
           "id": 468,
           "children": []
         },
         {
           "title": "Monaco",
-          "icon": "file",
+          "icon": "file-o",
           "id": 469,
           "children": []
         },
         {
           "title": "Moscow",
-          "icon": "file",
+          "icon": "file-o",
           "id": 470,
           "children": []
         },
         {
           "title": "Nicosia",
-          "icon": "file",
+          "icon": "file-o",
           "id": 471,
           "children": []
         },
         {
           "title": "Oslo",
-          "icon": "file",
+          "icon": "file-o",
           "id": 472,
           "children": []
         },
         {
           "title": "Paris",
-          "icon": "file",
+          "icon": "file-o",
           "id": 473,
           "children": []
         },
         {
           "title": "Podgorica",
-          "icon": "file",
+          "icon": "file-o",
           "id": 474,
           "children": []
         },
         {
           "title": "Prague",
-          "icon": "file",
+          "icon": "file-o",
           "id": 475,
           "children": []
         },
         {
           "title": "Riga",
-          "icon": "file",
+          "icon": "file-o",
           "id": 476,
           "children": []
         },
         {
           "title": "Rome",
-          "icon": "file",
+          "icon": "file-o",
           "id": 477,
           "children": []
         },
         {
           "title": "Samara",
-          "icon": "file",
+          "icon": "file-o",
           "id": 478,
           "children": []
         },
         {
           "title": "San_Marino",
-          "icon": "file",
+          "icon": "file-o",
           "id": 479,
           "children": []
         },
         {
           "title": "Sarajevo",
-          "icon": "file",
+          "icon": "file-o",
           "id": 480,
           "children": []
         },
         {
           "title": "Simferopol",
-          "icon": "file",
+          "icon": "file-o",
           "id": 481,
           "children": []
         },
         {
           "title": "Skopje",
-          "icon": "file",
+          "icon": "file-o",
           "id": 482,
           "children": []
         },
         {
           "title": "Sofia",
-          "icon": "file",
+          "icon": "file-o",
           "id": 483,
           "children": []
         },
         {
           "title": "Stockholm",
-          "icon": "file",
+          "icon": "file-o",
           "id": 484,
           "children": []
         },
         {
           "title": "Tallinn",
-          "icon": "file",
+          "icon": "file-o",
           "id": 485,
           "children": []
         },
         {
           "title": "Tirane",
-          "icon": "file",
+          "icon": "file-o",
           "id": 486,
           "children": []
         },
         {
           "title": "Tiraspol",
-          "icon": "file",
+          "icon": "file-o",
           "id": 487,
           "children": []
         },
         {
           "title": "Ulyanovsk",
-          "icon": "file",
+          "icon": "file-o",
           "id": 488,
           "children": []
         },
         {
           "title": "Uzhgorod",
-          "icon": "file",
+          "icon": "file-o",
           "id": 489,
           "children": []
         },
         {
           "title": "Vaduz",
-          "icon": "file",
+          "icon": "file-o",
           "id": 490,
           "children": []
         },
         {
           "title": "Vatican",
-          "icon": "file",
+          "icon": "file-o",
           "id": 491,
           "children": []
         },
         {
           "title": "Vienna",
-          "icon": "file",
+          "icon": "file-o",
           "id": 492,
           "children": []
         },
         {
           "title": "Vilnius",
-          "icon": "file",
+          "icon": "file-o",
           "id": 493,
           "children": []
         },
         {
           "title": "Volgograd",
-          "icon": "file",
+          "icon": "file-o",
           "id": 494,
           "children": []
         },
         {
           "title": "Warsaw",
-          "icon": "file",
+          "icon": "file-o",
           "id": 495,
           "children": []
         },
         {
           "title": "Zagreb",
-          "icon": "file",
+          "icon": "file-o",
           "id": 496,
           "children": []
         },
         {
           "title": "Zaporozhye",
-          "icon": "file",
+          "icon": "file-o",
           "id": 497,
           "children": []
         },
         {
           "title": "Zurich",
-          "icon": "file",
+          "icon": "file-o",
           "id": 498,
           "children": []
         }
@@ -3006,61 +3006,61 @@ window.tz = {
     },
     {
       "title": "GB",
-      "icon": "file",
+      "icon": "file-o",
       "id": 499,
       "children": []
     },
     {
       "title": "GB-Eire",
-      "icon": "file",
+      "icon": "file-o",
       "id": 500,
       "children": []
     },
     {
       "title": "GMT",
-      "icon": "file",
+      "icon": "file-o",
       "id": 501,
       "children": []
     },
     {
       "title": "GMT-0",
-      "icon": "file",
+      "icon": "file-o",
       "id": 502,
       "children": []
     },
     {
       "title": "GMT+0",
-      "icon": "file",
+      "icon": "file-o",
       "id": 503,
       "children": []
     },
     {
       "title": "GMT0",
-      "icon": "file",
+      "icon": "file-o",
       "id": 504,
       "children": []
     },
     {
       "title": "Greenwich",
-      "icon": "file",
+      "icon": "file-o",
       "id": 505,
       "children": []
     },
     {
       "title": "Hongkong",
-      "icon": "file",
+      "icon": "file-o",
       "id": 506,
       "children": []
     },
     {
       "title": "HST",
-      "icon": "file",
+      "icon": "file-o",
       "id": 507,
       "children": []
     },
     {
       "title": "Iceland",
-      "icon": "file",
+      "icon": "file-o",
       "id": 508,
       "children": []
     },
@@ -3071,67 +3071,67 @@ window.tz = {
       "children": [
         {
           "title": "Antananarivo",
-          "icon": "file",
+          "icon": "file-o",
           "id": 510,
           "children": []
         },
         {
           "title": "Chagos",
-          "icon": "file",
+          "icon": "file-o",
           "id": 511,
           "children": []
         },
         {
           "title": "Christmas",
-          "icon": "file",
+          "icon": "file-o",
           "id": 512,
           "children": []
         },
         {
           "title": "Cocos",
-          "icon": "file",
+          "icon": "file-o",
           "id": 513,
           "children": []
         },
         {
           "title": "Comoro",
-          "icon": "file",
+          "icon": "file-o",
           "id": 514,
           "children": []
         },
         {
           "title": "Kerguelen",
-          "icon": "file",
+          "icon": "file-o",
           "id": 515,
           "children": []
         },
         {
           "title": "Mahe",
-          "icon": "file",
+          "icon": "file-o",
           "id": 516,
           "children": []
         },
         {
           "title": "Maldives",
-          "icon": "file",
+          "icon": "file-o",
           "id": 517,
           "children": []
         },
         {
           "title": "Mauritius",
-          "icon": "file",
+          "icon": "file-o",
           "id": 518,
           "children": []
         },
         {
           "title": "Mayotte",
-          "icon": "file",
+          "icon": "file-o",
           "id": 519,
           "children": []
         },
         {
           "title": "Reunion",
-          "icon": "file",
+          "icon": "file-o",
           "id": 520,
           "children": []
         }
@@ -3139,43 +3139,43 @@ window.tz = {
     },
     {
       "title": "Iran",
-      "icon": "file",
+      "icon": "file-o",
       "id": 521,
       "children": []
     },
     {
       "title": "Israel",
-      "icon": "file",
+      "icon": "file-o",
       "id": 522,
       "children": []
     },
     {
       "title": "Jamaica",
-      "icon": "file",
+      "icon": "file-o",
       "id": 523,
       "children": []
     },
     {
       "title": "Japan",
-      "icon": "file",
+      "icon": "file-o",
       "id": 524,
       "children": []
     },
     {
       "title": "Kwajalein",
-      "icon": "file",
+      "icon": "file-o",
       "id": 525,
       "children": []
     },
     {
       "title": "Libya",
-      "icon": "file",
+      "icon": "file-o",
       "id": 526,
       "children": []
     },
     {
       "title": "MET",
-      "icon": "file",
+      "icon": "file-o",
       "id": 527,
       "children": []
     },
@@ -3186,19 +3186,19 @@ window.tz = {
       "children": [
         {
           "title": "BajaNorte",
-          "icon": "file",
+          "icon": "file-o",
           "id": 529,
           "children": []
         },
         {
           "title": "BajaSur",
-          "icon": "file",
+          "icon": "file-o",
           "id": 530,
           "children": []
         },
         {
           "title": "General",
-          "icon": "file",
+          "icon": "file-o",
           "id": 531,
           "children": []
         }
@@ -3206,31 +3206,31 @@ window.tz = {
     },
     {
       "title": "MST",
-      "icon": "file",
+      "icon": "file-o",
       "id": 532,
       "children": []
     },
     {
       "title": "MST7MDT",
-      "icon": "file",
+      "icon": "file-o",
       "id": 533,
       "children": []
     },
     {
       "title": "Navajo",
-      "icon": "file",
+      "icon": "file-o",
       "id": 534,
       "children": []
     },
     {
       "title": "NZ",
-      "icon": "file",
+      "icon": "file-o",
       "id": 535,
       "children": []
     },
     {
       "title": "NZ-CHAT",
-      "icon": "file",
+      "icon": "file-o",
       "id": 536,
       "children": []
     },
@@ -3241,259 +3241,259 @@ window.tz = {
       "children": [
         {
           "title": "Apia",
-          "icon": "file",
+          "icon": "file-o",
           "id": 538,
           "children": []
         },
         {
           "title": "Auckland",
-          "icon": "file",
+          "icon": "file-o",
           "id": 539,
           "children": []
         },
         {
           "title": "Bougainville",
-          "icon": "file",
+          "icon": "file-o",
           "id": 540,
           "children": []
         },
         {
           "title": "Chatham",
-          "icon": "file",
+          "icon": "file-o",
           "id": 541,
           "children": []
         },
         {
           "title": "Chuuk",
-          "icon": "file",
+          "icon": "file-o",
           "id": 542,
           "children": []
         },
         {
           "title": "Easter",
-          "icon": "file",
+          "icon": "file-o",
           "id": 543,
           "children": []
         },
         {
           "title": "Efate",
-          "icon": "file",
+          "icon": "file-o",
           "id": 544,
           "children": []
         },
         {
           "title": "Enderbury",
-          "icon": "file",
+          "icon": "file-o",
           "id": 545,
           "children": []
         },
         {
           "title": "Fakaofo",
-          "icon": "file",
+          "icon": "file-o",
           "id": 546,
           "children": []
         },
         {
           "title": "Fiji",
-          "icon": "file",
+          "icon": "file-o",
           "id": 547,
           "children": []
         },
         {
           "title": "Funafuti",
-          "icon": "file",
+          "icon": "file-o",
           "id": 548,
           "children": []
         },
         {
           "title": "Galapagos",
-          "icon": "file",
+          "icon": "file-o",
           "id": 549,
           "children": []
         },
         {
           "title": "Gambier",
-          "icon": "file",
+          "icon": "file-o",
           "id": 550,
           "children": []
         },
         {
           "title": "Guadalcanal",
-          "icon": "file",
+          "icon": "file-o",
           "id": 551,
           "children": []
         },
         {
           "title": "Guam",
-          "icon": "file",
+          "icon": "file-o",
           "id": 552,
           "children": []
         },
         {
           "title": "Honolulu",
-          "icon": "file",
+          "icon": "file-o",
           "id": 553,
           "children": []
         },
         {
           "title": "Johnston",
-          "icon": "file",
+          "icon": "file-o",
           "id": 554,
           "children": []
         },
         {
           "title": "Kiritimati",
-          "icon": "file",
+          "icon": "file-o",
           "id": 555,
           "children": []
         },
         {
           "title": "Kosrae",
-          "icon": "file",
+          "icon": "file-o",
           "id": 556,
           "children": []
         },
         {
           "title": "Kwajalein",
-          "icon": "file",
+          "icon": "file-o",
           "id": 557,
           "children": []
         },
         {
           "title": "Majuro",
-          "icon": "file",
+          "icon": "file-o",
           "id": 558,
           "children": []
         },
         {
           "title": "Marquesas",
-          "icon": "file",
+          "icon": "file-o",
           "id": 559,
           "children": []
         },
         {
           "title": "Midway",
-          "icon": "file",
+          "icon": "file-o",
           "id": 560,
           "children": []
         },
         {
           "title": "Nauru",
-          "icon": "file",
+          "icon": "file-o",
           "id": 561,
           "children": []
         },
         {
           "title": "Niue",
-          "icon": "file",
+          "icon": "file-o",
           "id": 562,
           "children": []
         },
         {
           "title": "Norfolk",
-          "icon": "file",
+          "icon": "file-o",
           "id": 563,
           "children": []
         },
         {
           "title": "Noumea",
-          "icon": "file",
+          "icon": "file-o",
           "id": 564,
           "children": []
         },
         {
           "title": "Pago_Pago",
-          "icon": "file",
+          "icon": "file-o",
           "id": 565,
           "children": []
         },
         {
           "title": "Palau",
-          "icon": "file",
+          "icon": "file-o",
           "id": 566,
           "children": []
         },
         {
           "title": "Pitcairn",
-          "icon": "file",
+          "icon": "file-o",
           "id": 567,
           "children": []
         },
         {
           "title": "Pohnpei",
-          "icon": "file",
+          "icon": "file-o",
           "id": 568,
           "children": []
         },
         {
           "title": "Ponape",
-          "icon": "file",
+          "icon": "file-o",
           "id": 569,
           "children": []
         },
         {
           "title": "Port_Moresby",
-          "icon": "file",
+          "icon": "file-o",
           "id": 570,
           "children": []
         },
         {
           "title": "Rarotonga",
-          "icon": "file",
+          "icon": "file-o",
           "id": 571,
           "children": []
         },
         {
           "title": "Saipan",
-          "icon": "file",
+          "icon": "file-o",
           "id": 572,
           "children": []
         },
         {
           "title": "Samoa",
-          "icon": "file",
+          "icon": "file-o",
           "id": 573,
           "children": []
         },
         {
           "title": "Tahiti",
-          "icon": "file",
+          "icon": "file-o",
           "id": 574,
           "children": []
         },
         {
           "title": "Tarawa",
-          "icon": "file",
+          "icon": "file-o",
           "id": 575,
           "children": []
         },
         {
           "title": "Tongatapu",
-          "icon": "file",
+          "icon": "file-o",
           "id": 576,
           "children": []
         },
         {
           "title": "Truk",
-          "icon": "file",
+          "icon": "file-o",
           "id": 577,
           "children": []
         },
         {
           "title": "Wake",
-          "icon": "file",
+          "icon": "file-o",
           "id": 578,
           "children": []
         },
         {
           "title": "Wallis",
-          "icon": "file",
+          "icon": "file-o",
           "id": 579,
           "children": []
         },
         {
           "title": "Yap",
-          "icon": "file",
+          "icon": "file-o",
           "id": 580,
           "children": []
         }
@@ -3501,61 +3501,61 @@ window.tz = {
     },
     {
       "title": "Poland",
-      "icon": "file",
+      "icon": "file-o",
       "id": 581,
       "children": []
     },
     {
       "title": "Portugal",
-      "icon": "file",
+      "icon": "file-o",
       "id": 582,
       "children": []
     },
     {
       "title": "PRC",
-      "icon": "file",
+      "icon": "file-o",
       "id": 583,
       "children": []
     },
     {
       "title": "PST8PDT",
-      "icon": "file",
+      "icon": "file-o",
       "id": 584,
       "children": []
     },
     {
       "title": "ROC",
-      "icon": "file",
+      "icon": "file-o",
       "id": 585,
       "children": []
     },
     {
       "title": "ROK",
-      "icon": "file",
+      "icon": "file-o",
       "id": 586,
       "children": []
     },
     {
       "title": "Singapore",
-      "icon": "file",
+      "icon": "file-o",
       "id": 587,
       "children": []
     },
     {
       "title": "Turkey",
-      "icon": "file",
+      "icon": "file-o",
       "id": 588,
       "children": []
     },
     {
       "title": "UCT",
-      "icon": "file",
+      "icon": "file-o",
       "id": 589,
       "children": []
     },
     {
       "title": "Universal",
-      "icon": "file",
+      "icon": "file-o",
       "id": 590,
       "children": []
     },
@@ -3566,79 +3566,79 @@ window.tz = {
       "children": [
         {
           "title": "Alaska",
-          "icon": "file",
+          "icon": "file-o",
           "id": 592,
           "children": []
         },
         {
           "title": "Aleutian",
-          "icon": "file",
+          "icon": "file-o",
           "id": 593,
           "children": []
         },
         {
           "title": "Arizona",
-          "icon": "file",
+          "icon": "file-o",
           "id": 594,
           "children": []
         },
         {
           "title": "Central",
-          "icon": "file",
+          "icon": "file-o",
           "id": 595,
           "children": []
         },
         {
           "title": "East-Indiana",
-          "icon": "file",
+          "icon": "file-o",
           "id": 596,
           "children": []
         },
         {
           "title": "Eastern",
-          "icon": "file",
+          "icon": "file-o",
           "id": 597,
           "children": []
         },
         {
           "title": "Hawaii",
-          "icon": "file",
+          "icon": "file-o",
           "id": 598,
           "children": []
         },
         {
           "title": "Indiana-Starke",
-          "icon": "file",
+          "icon": "file-o",
           "id": 599,
           "children": []
         },
         {
           "title": "Michigan",
-          "icon": "file",
+          "icon": "file-o",
           "id": 600,
           "children": []
         },
         {
           "title": "Mountain",
-          "icon": "file",
+          "icon": "file-o",
           "id": 601,
           "children": []
         },
         {
           "title": "Pacific",
-          "icon": "file",
+          "icon": "file-o",
           "id": 602,
           "children": []
         },
         {
           "title": "Pacific-New",
-          "icon": "file",
+          "icon": "file-o",
           "id": 603,
           "children": []
         },
         {
           "title": "Samoa",
-          "icon": "file",
+          "icon": "file-o",
           "id": 604,
           "children": []
         }
@@ -3646,25 +3646,25 @@ window.tz = {
     },
     {
       "title": "UTC",
-      "icon": "file",
+      "icon": "file-o",
       "id": 605,
       "children": []
     },
     {
       "title": "W-SU",
-      "icon": "file",
+      "icon": "file-o",
       "id": 606,
       "children": []
     },
     {
       "title": "WET",
-      "icon": "file",
+      "icon": "file-o",
       "id": 607,
       "children": []
     },
     {
       "title": "Zulu",
-      "icon": "file",
+      "icon": "file-o",
       "id": 608,
       "children": []
     }

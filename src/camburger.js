@@ -6,6 +6,7 @@ Camburger.Sidebar = function(options) {
     this.open = options.open;
     this.showUnicorns = options.showUnicorns;
     this.animationsDuration = options.animationsDuration || 'fast';
+    this.quickStart = [];
 
     this.history = new Camburger.History({sidebar: self});
     this.dim = $('<div class="camburger-dim"></div>');
@@ -13,7 +14,7 @@ Camburger.Sidebar = function(options) {
     this.header = new Camburger.Header({sidebar: self});
     this.searchBar = new Camburger.SearchBar({sidebar: self});
     this.panels = new Camburger.Panels({sidebar: self});
-    this.searchIndex = new Camburger.SearchIndex({});
+    this.searchIndex = new Camburger.SearchIndex({sidebar: self});
 
     this.dim.appendTo($('body'));
     this.el.appendTo($('body'));
@@ -35,6 +36,20 @@ Camburger.Sidebar = function(options) {
         self.onSearch(searchText);
     });
 
+    this.subscribe('favourite:toggle', function(ctx, evt) {
+        if (evt.starred) {
+            self.star(evt.id);
+        } else {
+            self.unstar(evt.id);
+        }
+    });
+
+    this.subscribe('sticky:reordered', function(ctx, evt){
+        self.quickStart.splice(0, self.quickStart.length);
+        $.each(evt.list, function(index, id){ self.quickStart.push(id); });
+        self.publish('quickstart:change', {quickStart: self.quickStart});
+    });
+
     this.dim.click(function(e){
         self.hide();
     });
@@ -50,25 +65,37 @@ Camburger.Sidebar = function(options) {
     }
 };
 
+Camburger.Sidebar.prototype.star = function(itemId) {
+    this.quickStart.push(itemId);
+    this.publish('quickstart:change', {quickStart: this.quickStart});
+};
+
+Camburger.Sidebar.prototype.unstar = function(itemId) {
+    var indexOtItemInQuickStart = this.quickStart.indexOf(itemId);
+    if (indexOtItemInQuickStart > -1) {
+        this.quickStart.splice(indexOtItemInQuickStart, 1);
+        this.publish('quickstart:change', {quickStart: this.quickStart});
+    }
+};
+
 Camburger.Sidebar.prototype.onSearch = function(searchText) {
     var self = this;
 
     if (searchText && searchText.length > 0) {
-        if (searchText != self.lastSearchText) {
-            self.lastSearchText = searchText;
-            self.searchResult = self.searchIndex.search(searchText);
-            self.header.showSearchResult(searchText);
-            self.panels.showSearchResult(self.searchResult);
-        }
+        self.lastSearchText = searchText;
+        self.searchResult = self.searchIndex.search(searchText);
+        self.header.showSearchResult(searchText);
+        self.panels.showSearchResult(self.searchResult);
     } else {
         self.header.clearSearchResult();
         self.panels.clearSearchResult();
     }
 };
 
-Camburger.Sidebar.prototype.setMenu = function(menu) {
-    this.panels.setMenu(menu);
-    this.searchIndex.rebuild(menu);
+Camburger.Sidebar.prototype.setRootMenu = function(rootMenu) {
+    this.quickStart = rootMenu.quickStart || [];
+    this.searchIndex.rebuild(rootMenu);
+    this.panels.setRootMenu(rootMenu);
 };
 
 Camburger.Sidebar.prototype.show = function() {
@@ -77,7 +104,7 @@ Camburger.Sidebar.prototype.show = function() {
         self.dim.css({visibility: 'visible'});
         self.dim.fadeIn();
         self.lastSearchText = false;
-        self.setMenu(self.history.beginning());
+        self.setRootMenu(self.history.beginning());
         self.publish('show');
         self.el.animate({left: 0}, {
             duration: self.animationsDuration,
@@ -138,18 +165,23 @@ Camburger.Sidebar.prototype.subscribe = function(topic, callback) {
 };
 
 Camburger.SearchIndex = function(options) {
+    this.sidebar = options.sidebar;
     this.titleIndex = [];
+    this.idLookup = {};
 };
 
-Camburger.SearchIndex.prototype.rebuild = function(items) {
+Camburger.SearchIndex.prototype.rebuild = function(rootMenuItem) {
     var self = this;
     self.titleIndex = [];
+    self.idLookup = {};
 
-    $.each(items, function(i, childItem){
-        indexMenuItem(childItem);
-    });
+    indexMenuItem(rootMenuItem);
 
     function indexMenuItem(menuItem) {
+        if (menuItem.id) {
+            self.idLookup[menuItem.id] = menuItem;
+        }
+
         if (menuItem.title && (!menuItem.children || menuItem.children.length == 0)) {
             self.titleIndex.push({
                 text: menuItem.title.toLowerCase(),
@@ -178,12 +210,16 @@ Camburger.SearchIndex.prototype.search = function(text) {
     });
 
     result.sort(function(thisHit, thatHit){
-        var thisScore = thisHit.favourite ? 1 : 0;
-        var thatScore = thatHit.favourite ? 1 : 0;
+        var thisScore = thisHit.id && self.sidebar.quickStart.indexOf(thisHit.id) > -1 ? 1 : 0;
+        var thatScore = thatHit.id && self.sidebar.quickStart.indexOf(thatHit.id) > -1 ? 1 : 0;
         return thatScore - thisScore;
     });
 
     return result;
+};
+
+Camburger.SearchIndex.prototype.findById = function(id) {
+    return this.idLookup[id];
 };
 
 Camburger.Header = function(options) {
@@ -251,9 +287,9 @@ Camburger.History = function(options) {
     this.history = [];
 };
 
-Camburger.History.prototype.start = function(items) {
+Camburger.History.prototype.start = function(rootMenu) {
     this.history = [];
-    this.openDirectory(items);
+    this.openDirectory(rootMenu);
 };
 
 Camburger.History.prototype.currentPage = function() {
@@ -265,7 +301,7 @@ Camburger.History.prototype.currentPage = function() {
     var historyItem = this.history[this.history.length - 1];
 
     if (this.isEmpty()) {
-        page.menu = historyItem;
+        page.menu = historyItem.children;
     } else {
         page.title = historyItem.title();
         page.menu = historyItem.children();
@@ -305,9 +341,11 @@ Camburger.SearchBar = function(options) {
     + '</div>');
     this.searchField = this.el.find('.search-field');
     this.sidebar.subscribe('show', function(){
-        var searchField = self.el.find('.search-field');
-        searchField.focus();
-        searchField.val('');
+        self.searchField.focus();
+        self.searchField.val('');
+    });
+    this.sidebar.subscribe('hide', function(){
+        self.searchField.blur();
     });
     this.searchField.keyup(function(e){
         self.onKeyup(e);
@@ -350,6 +388,7 @@ Camburger.Panels = function(options) {
     this.sidebar.subscribe('history:back', function(ctx, history){
         var panel = new Camburger.Panel({
             sidebar: self.sidebar
+          , stickyItems: history.isEmpty() ? self.sidebar.quickStart : []
           , items: history.currentPage().menu
         });
 
@@ -363,7 +402,7 @@ Camburger.Panels.prototype.showSearchResult = function(children) {
     var self = this;
 
     if (self.searchPanel) {
-        self.searchPanel.setItems(children);
+        self.searchPanel.setItems([], children);
         self.searchPanel.resetKeyboardSelection();
     } else {
         self.searchPanel = new Camburger.Panel({
@@ -380,6 +419,7 @@ Camburger.Panels.prototype.clearSearchResult = function() {
     if (self.searchPanel) {
         var panel = new Camburger.Panel({
             sidebar: self.sidebar
+          , stickyItems: self.sidebar.quickStart
           , items: self.sidebar.history.currentPage().menu
         });
         self.searchPanel = false;
@@ -409,17 +449,18 @@ Camburger.Panels.prototype.setCurrentPanel = function(panel) {
     this.currentPanel.resetKeyboardSelection();
 };
 
-Camburger.Panels.prototype.setMenu = function(menu) {
+Camburger.Panels.prototype.setRootMenu = function(rootMenu) {
     var self = this;
     this.el.empty();
     this.el.scrollTop(0);
     this.rootPanel = new Camburger.Panel({
         sidebar: self.sidebar
-      , items: menu
+      , stickyItems: rootMenu.quickStart
+      , items: rootMenu.children
     });
     this.rootPanel.el.appendTo(this.el);
     this.setCurrentPanel(this.rootPanel);
-    this.sidebar.history.start(menu);
+    this.sidebar.history.start(rootMenu);
     this.searchPanel = false;
 };
 
@@ -474,14 +515,49 @@ Camburger.Panel = function(options) {
     this.items = [];
     this.selectionIndex = -1;
 
-    this.setItems(options.items);
+    this.setItems(options.stickyItems || [], options.items);
 };
 
-Camburger.Panel.prototype.setItems = function(items) {
+Camburger.Panel.prototype.setItems = function(stickyItemIds, normalItems) {
     var self = this;
     self.items = [];
     self.el.empty();
-    $.each(items, function(index, itemOptions){
+
+    self.stickyEl = $('<div></div>');
+    self.stickyEl.appendTo(self.el);
+
+    $.each(stickyItemIds, function(index, stickyItemId){
+        var itemOptions = self.sidebar.searchIndex.findById(stickyItemId);
+        var menuItem = new Camburger.MenuItem({
+            data: itemOptions
+          , sidebar: self.sidebar
+        });
+        menuItem.el.appendTo(self.stickyEl);
+        menuItem.el.data('menu-id', stickyItemId);
+        self.items.push(menuItem);
+    });
+
+    self.stickyEl.sortable({
+        axis: 'y',
+        containment: 'parent'
+    });
+
+    self.stickyEl.on("sortstop", function onQuickStartReordered(event, ui) {
+        var idList = [];
+
+        self.stickyEl.children().each(function(i, menuItemEl){
+            idList.push($(menuItemEl).data('menu-id'));
+        })
+
+        self.sidebar.publish('sticky:reordered', { list: idList });
+    });
+
+    $.each(normalItems, function(index, itemOptions){
+        // Deduplicate items in panel
+        if (itemOptions.id && stickyItemIds.indexOf(itemOptions.id) > -1) {
+            return;
+        }
+
         var menuItem = new Camburger.MenuItem({
             data: itemOptions
           , sidebar: self.sidebar
@@ -532,9 +608,15 @@ Camburger.MenuItem = function(options) {
 
     this.data = options.data;
 
+    this.starred = this.sidebar.quickStart.indexOf(this.data.id) > -1;
+
     this.el.click(function(e){ self.onClick(e); });
 
-    this.el.find(".toggle-favourite").click(function(e){ self.onToggleFavourite(e); });
+    this.el.find(".toggle-favourite").click(function(e){
+        if (self.isLeaf()) {
+            self.onToggleFavourite(e);
+        }
+    });
 
     this.render();
 };
@@ -544,17 +626,24 @@ Camburger.MenuItem.prototype.isLeaf = function() {
 };
 
 Camburger.MenuItem.prototype.render = function() {
-    var indicator = this.el.find(".toggle-favourite i");
+    var indicator;
 
     $(".icon", this.el).addClass("fa-" + this.data.icon);
     $(".text", this.el).text(this.data.title);
 
-    if (this.data.favourite) {
-        indicator.addClass('fa-star');
-        indicator.removeClass('fa-star-o');
+    if (this.isLeaf()) {
+        indicator = this.el.find(".toggle-favourite i");
+        if (this.starred) {
+            indicator.addClass('fa-star');
+            indicator.removeClass('fa-star-o');
+        } else {
+            indicator.addClass('fa-star-o');
+            indicator.removeClass('fa-star');
+        }
     } else {
-        indicator.addClass('fa-star-o');
-        indicator.removeClass('fa-star');
+        this.el.find('.toggle-favourite').css({
+            visibility: 'hidden'
+        });
     }
 };
 
@@ -577,9 +666,9 @@ Camburger.MenuItem.prototype.onClick = function(e) {
 };
 
 Camburger.MenuItem.prototype.onToggleFavourite = function(e) {
-    this.data.favourite = !this.data.favourite;
+    this.starred = !this.starred;
     this.render();
-    this.sidebar.publish('favourite:toggle', this.data);
+    this.sidebar.publish('favourite:toggle', {id: this.data.id, starred: this.starred});
     e.stopPropagation();
 };
 

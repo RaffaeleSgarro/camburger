@@ -19,11 +19,11 @@ body {
   padding: 10px 20px;
   color: white;
   background-color: #3683D6;
-  font-size: 30px;
 }
 
 .top-navigation .toggle-sidebar {
   cursor: pointer;
+  font-size: 30px;
 }
 
 .fa-spacing {

@@ -4,6 +4,8 @@
   <link rel="stylesheet" href="src/unicorn.css" type="text/css" />
   <link rel="stylesheet" href="src/camburger.css" type="text/css" />
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" type="text/css" />
+  <link rel="stylesheet" href="vendor/jquery-ui.css" />
+  <link rel="stylesheet" href="vendor/jquery-ui.structure.css" />
   <link rel="stylesheet" href="app.css" type="text/css" />
 </head>
 <body>
@@ -12,9 +14,13 @@
     <span class="toggle-sidebar">
       <i class="fa fa-bars fa-spacing"></i>Camilla
     </span>
+    <input type="text" name="foo" placeholder="Search something..." />
+    <button>Click me!</button>
+    <label><input type="checkbox" name="a_check" />I'm fine</label>
   </nav>
 </div>
 <script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="vendor/jquery-ui.js"></script>
 <script src="vendor/eventbus.min.js"></script>
 <script src="src/camburger.js"></script>
 <script src="src/unicorn.js"></script>
@@ -22,8 +28,8 @@
 <script>
 camburgerOptions = {
     showUnicorns: true
-  , howManyUnicorns: 20
-  , unicornImgSrc: 'src/unicorn.png'
+  , howManyUnicorns: 10
+  , unicornImgSrc: '../src/unicorn.png'
   , open: true
 };
 </script>
