@@ -363,6 +363,13 @@ Camburger.SearchBar.prototype.onKeyup = function(e) {
         return;
     }
 
+    // Filter out events like up/down arrow
+    if (self.searchField.val() === self.textOnLastKeyup) {
+        return;
+    }
+
+    self.textOnLastKeyup = self.searchField.val();
+
     self.lastSearchText = self.searchField.val();
 
     setTimeout(function(){
