@@ -196,7 +196,7 @@ Camburger.SearchIndex.prototype.rebuild = function(rootMenuItem) {
 };
 
 Camburger.SearchIndex.prototype.search = function(text) {
-    if (!text || text.length < 2) {
+    if (!text) {
         return [];
     }
 
@@ -204,7 +204,8 @@ Camburger.SearchIndex.prototype.search = function(text) {
     var result = [];
     var normalized = text.toLowerCase();
     $.each(self.titleIndex, function(i, indexed){
-        if (indexed.text.indexOf(normalized) > -1) {
+        if (indexed.text.indexOf(normalized) === 0 ||
+           (text.length > 2 && indexed.text.indexOf(normalized) > -1)) {
             result.push(indexed.menuItem);
         }
     });
